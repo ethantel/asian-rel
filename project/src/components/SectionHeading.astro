@@ -1,0 +1,36 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  alignment?: 'left' | 'center' | 'right';
+  hasDivider?: boolean;
+}
+
+const { 
+  title, 
+  subtitle, 
+  alignment = 'center',
+  hasDivider = true
+} = Astro.props;
+
+const textAlignClass = 
+  alignment === 'left' 
+    ? 'text-left' 
+    : alignment === 'right' 
+      ? 'text-right' 
+      : 'text-center mx-auto';
+---
+
+<div class={`max-w-3xl mb-12 ${textAlignClass}`} data-aos="fade-up">
+  <h2 class="text-3xl md:text-4xl font-serif mb-4">{title}</h2>
+  {subtitle && <p class="text-neutral-700 text-lg">{subtitle}</p>}
+  {hasDivider && (
+    <div class={`mt-6 inline-block ${alignment === 'left' ? 'ml-0 mr-auto' : alignment === 'right' ? 'ml-auto mr-0' : 'mx-auto'}`}>
+      <div class="flex items-center gap-2">
+        <span class="h-0.5 w-12 bg-primary-600"></span>
+        <span class="h-0.5 w-4 bg-primary-400"></span>
+        <span class="h-0.5 w-2 bg-primary-300"></span>
+      </div>
+    </div>
+  )}
+</div>

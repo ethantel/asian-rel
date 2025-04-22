@@ -1,0 +1,58 @@
+---
+interface GridItem {
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+}
+
+interface Props {
+  items: GridItem[];
+  columns?: 2 | 3 | 4;
+}
+
+const { items, columns = 3 } = Astro.props;
+
+const colClass = 
+  columns === 2 
+    ? 'md:grid-cols-2' 
+    : columns === 4 
+      ? 'md:grid-cols-2 lg:grid-cols-4' 
+      : 'md:grid-cols-2 lg:grid-cols-3';
+---
+
+<div class={`grid grid-cols-1 ${colClass} gap-6`}>
+  {
+    items.map((item, index) => (
+      <a 
+        href={item.link} 
+        class="group relative overflow-hidden rounded-lg aspect-[4/3] bg-neutral-800"
+        data-aos="fade-up"
+        data-aos-delay={index * 100}
+      >
+        <img 
+          src={item.image} 
+          alt={item.title} 
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-6">
+          <h3 class="text-white text-xl font-serif mb-2">{item.title}</h3>
+          <p class="text-neutral-200 text-sm line-clamp-2">{item.description}</p>
+          <span class="mt-3 inline-flex items-center text-primary-300 font-medium text-sm">
+            Explore
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke-width="1.5" 
+              stroke="currentColor" 
+              class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </span>
+        </div>
+      </a>
+    ))
+  }
+</div>

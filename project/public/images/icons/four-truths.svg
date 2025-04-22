@@ -1,0 +1,10 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="8" y="12" width="48" height="12" rx="2" fill="#F38E1C"/>
+  <rect x="8" y="26" width="48" height="12" rx="2" fill="#F7B151"/>
+  <rect x="8" y="40" width="48" height="12" rx="2" fill="#F9C978"/>
+  <rect x="8" y="54" width="48" height="12" rx="2" fill="#FCE0AD"/>
+  <text x="12" y="21" font-family="serif" font-size="8" fill="white">1. Suffering</text>
+  <text x="12" y="35" font-family="serif" font-size="8" fill="white">2. Origin</text>
+  <text x="12" y="49" font-family="serif" font-size="8" fill="white">3. Cessation</text>
+  <text x="12" y="63" font-family="serif" font-size="8" fill="white">4. Path</text>
+</svg>

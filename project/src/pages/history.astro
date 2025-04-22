@@ -1,0 +1,204 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+
+// Sightings data
+const sightings = [
+  {
+    id: 'sight1',
+    title: 'Old Age',
+    image: '/images/sightings/old-age.png',
+    description: 'Encountering an elderly person, Siddhartha realized that aging is inevitable for all beings, confronting mortality for the first time.'
+  },
+  {
+    id: 'sight2',
+    title: 'Illness',
+    image: '/images/sightings/illness.png',
+    description: 'Seeing a person afflicted with disease, the prince understood that sickness affects everyone, regardless of wealth or status.'
+  },
+  {
+    id: 'sight3',
+    title: 'Death',
+    image: '/images/sightings/death.png',
+    description: 'Witnessing a funeral procession revealed the ultimate truth of mortality, deepening Siddhartha\'s existential questions.'
+  },
+  {
+    id: 'sight4',
+    title: 'Ascetic',
+    image: '/images/sightings/ascetic.png',
+    description: 'Meeting a wandering holy man showed Siddhartha a path of renunciation and seeking, inspiring his departure from palace life.'
+  }
+];
+---
+
+<Layout title="History & Origins | The Pathway to Buddhism">
+  <Hero 
+    title="History & Origins" 
+    subtitle="Exploring the life of Siddhartha Gautama and the beginnings of Buddhist thought" 
+    bgImage="/images/history-hero.jpg"
+  />
+
+  <!-- Timeline Section -->
+  <section id="timeline" class="section-padding">
+    <div class="container mx-auto px-4">
+      <SectionHeading
+        title="The Four Sightings"
+        subtitle="The pivotal encounters that led Prince Siddhartha Gautama to leave his palace and seek enlightenment"
+      />
+      
+      <div class="relative">
+        <!-- Timeline line -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary-200"></div>
+        
+        <!-- Timeline items -->
+        {sightings.map((sight, index) => (
+          <div class={`relative z-10 flex items-center mb-16 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`} data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}>
+            <!-- Content side -->
+            <div class={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:pr-12 text-right' : 'md:pl-12 text-left'}`}>
+              <h3 class="text-2xl font-serif mb-3">{sight.title}</h3>
+              <p class="text-neutral-700">{sight.description}</p>
+            </div>
+            
+            <!-- Image side -->
+            <div class={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:pl-12' : 'md:pr-12'}`}>
+              <img 
+                src={sight.image} 
+                alt={sight.title} 
+                class="rounded-lg shadow-md w-full h-48 md:h-64 object-cover"
+                id={sight.id}
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Buddha's Life Section -->
+  <section id="buddha" class="section-padding bg-neutral-100">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <img 
+            src="/images/buddha-life.jpg" 
+            alt="Life of Buddha" 
+            class="rounded-lg shadow-lg w-full"
+          />
+        </div>
+        <div data-aos="fade-left">
+          <h2 class="text-3xl font-serif mb-6">Life of Siddhartha Gautama</h2>
+          <p class="text-neutral-700 mb-6">
+            Born a prince in Lumbini (present-day Nepal) around 563 BCE, Siddhartha Gautama lived in luxury, sheltered from the world's suffering. After the four sightings, he left his palace, wife, and infant son to seek understanding of human suffering.
+          </p>
+          <p class="text-neutral-700 mb-6">
+            After six years of ascetic practices and meditation, Gautama achieved enlightenment while meditating under a Bodhi tree. He became known as the Buddha, or "Awakened One," and spent the next 45 years teaching the path to liberation.
+          </p>
+          
+          <blockquote class="border-l-4 border-primary-500 pl-4 italic text-lg my-8">
+            "I teach suffering, its origin, cessation and path. That's all I teach."
+            <footer class="text-neutral-700 mt-2 text-sm">— The Buddha</footer>
+          </blockquote>
+          
+          <p class="text-neutral-700">
+            The Buddha's teachings spread throughout India and eventually across Asia, evolving into various schools and traditions while maintaining core principles about suffering, impermanence, and the path to liberation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sacred Texts Section -->
+  <section id="texts" class="section-padding">
+    <div class="container mx-auto px-4">
+      <SectionHeading
+        title="Buddhist Sacred Texts"
+        subtitle="The foundational writings that preserve and transmit Buddhist teachings"
+      />
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up">
+          <h3 class="text-xl font-serif mb-3">Tripitaka (Pali Canon)</h3>
+          <p class="text-neutral-700 mb-4">
+            The earliest collection of Buddhist teachings, preserved in the Pali language. It consists of three "baskets" (pitaka): the Vinaya Pitaka (monastic rules), Sutta Pitaka (discourses), and Abhidhamma Pitaka (philosophical analysis).
+          </p>
+          <p class="text-sm text-neutral-500 italic">
+            Primary texts for Theravada Buddhism
+          </p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="text-xl font-serif mb-3">Mahayana Sutras</h3>
+          <p class="text-neutral-700 mb-4">
+            Later texts that expanded Buddhist philosophy, including the Heart Sutra, Diamond Sutra, and Lotus Sutra. These writings explored new concepts like emptiness (sunyata), Buddha-nature, and the bodhisattva ideal.
+          </p>
+          <p class="text-sm text-neutral-500 italic">
+            Foundation for Mahayana Buddhist traditions
+          </p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="text-xl font-serif mb-3">Tibetan Buddhist Canon</h3>
+          <p class="text-neutral-700 mb-4">
+            Includes the Kangyur (Buddha's words) and Tengyur (commentaries), along with tantric texts. This collection preserves many Sanskrit works lost in India and includes unique Vajrayana teachings.
+          </p>
+          <p class="text-sm text-neutral-500 italic">
+            Core texts for Tibetan Buddhist traditions
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Sections Navigation -->
+  <section class="py-12 bg-primary-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-serif text-center mb-8">Continue Your Exploration</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <a href="/eightfold-path" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex items-center">
+          <div class="mr-4 text-primary-600">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-serif">The Four Noble Truths & Eightfold Path</h3>
+            <p class="text-neutral-700 text-sm">The core teachings that followed Buddha's enlightenment</p>
+          </div>
+        </a>
+        
+        <a href="/rituals" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex items-center">
+          <div class="mr-4 text-primary-600">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-serif">Rituals & Devotional Practices</h3>
+            <p class="text-neutral-700 text-sm">How Buddhist teachings are expressed through devotional acts</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  // Add lightbox functionality for sighting images
+  document.addEventListener('DOMContentLoaded', () => {
+    const sightingImages = document.querySelectorAll('#timeline img');
+    
+    sightingImages.forEach(img => {
+      img.addEventListener('click', () => {
+        // Here you would normally implement a lightbox
+        // For this version, we'll just make the image view larger or redirect to image detail
+        const imgSrc = img.getAttribute('src');
+        window.open(imgSrc, '_blank');
+      });
+      
+      // Add pointer cursor to show images are clickable
+      img.style.cursor = 'pointer';
+    });
+  });
+</script>
