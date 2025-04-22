@@ -1,10 +1,19 @@
-<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="8" y="12" width="48" height="12" rx="2" fill="#F38E1C"/>
-  <rect x="8" y="26" width="48" height="12" rx="2" fill="#F7B151"/>
-  <rect x="8" y="40" width="48" height="12" rx="2" fill="#F9C978"/>
-  <rect x="8" y="54" width="48" height="12" rx="2" fill="#FCE0AD"/>
-  <text x="12" y="21" font-family="serif" font-size="8" fill="white">1. Suffering</text>
-  <text x="12" y="35" font-family="serif" font-size="8" fill="white">2. Origin</text>
-  <text x="12" y="49" font-family="serif" font-size="8" fill="white">3. Cessation</text>
-  <text x="12" y="63" font-family="serif" font-size="8" fill="white">4. Path</text>
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="64" height="64" viewBox="1.845 5.554 427.237 39.815" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g style="" transform="matrix(2.05739, 0, 0, 2.05739, -8.459125, -13.483844)">
+    <rect x="8" y="12.753" width="48" height="12" rx="2" fill="#F38E1C"/>
+    <text x="12" y="21.333" font-family="serif" font-size="8" fill="white" style="white-space: pre; font-size: 8px;">1. Suffering</text>
+  </g>
+  <g transform="matrix(2.05739, 0, 0, 2.05739, -6.100661, -13.483844)" style="">
+    <rect x="57.833" y="12.753" width="48" height="12" rx="2" fill="#F7B151"/>
+    <text x="61.833" y="21.333" font-family="serif" font-size="8" fill="white" style="white-space: pre; font-size: 8px;">2. Origin</text>
+  </g>
+  <g transform="matrix(2.05739, 0, 0, 2.05739, -7.766481, -13.483844)" style="">
+    <rect x="109.622" y="12.752" width="48" height="12" rx="2" fill="#F9C978"/>
+    <text x="113.622" y="21.333" font-family="serif" font-size="8" fill="white" style="white-space: pre; font-size: 8px;">3. Cessation</text>
+  </g>
+  <g style="" transform="matrix(2.05739, 0, 0, 2.05739, -8.459125, -13.483844)">
+    <rect x="160.938" y="12.753" width="48" height="12" rx="2" fill="#FCE0AD"/>
+    <text x="164.938" y="21.333" font-family="serif" font-size="8" fill="white" style="white-space: pre; font-size: 8px;">4. Path</text>
+  </g>
 </svg>

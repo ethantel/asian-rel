@@ -4,9 +4,10 @@ interface Props {
   description: string;
   icon: string;
   link: string;
+  iconClass?: string;
 }
 
-const { title, description, icon, link } = Astro.props;
+const { title, description, icon, link, iconClass = 'w-16 h-16' } = Astro.props;
 ---
 
 <div 
@@ -17,7 +18,7 @@ const { title, description, icon, link } = Astro.props;
     <img 
       src={`/asian-rel/images/icons/${icon}.svg`} 
       alt={title} 
-      class="w-16 h-16"
+      class={iconClass}
     />
   </div>
   <h3 class="text-xl font-serif mb-3">{title}</h3>

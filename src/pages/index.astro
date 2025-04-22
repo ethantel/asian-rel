@@ -11,7 +11,8 @@ const features = [
     title: 'Four Noble Truths',
     description: 'Understand the core principles that reveal the nature of suffering and the path to its cessation.',
     icon: 'four-truths',
-    link: '/asian-rel/eightfold-path#truths'
+    link: '/asian-rel/eightfold-path#truths',
+    iconClass: 'w-60 h-12' // Add custom size class
   },
   {
     title: 'Eightfold Path',
@@ -131,6 +132,7 @@ const galleryImages = [
             description={feature.description}
             icon={feature.icon}
             link={feature.link}
+            iconClass={feature.iconClass}
           />
         ))}
       </div>
