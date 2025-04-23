@@ -51,40 +51,6 @@ const khandas = [
       "True liberation comes from understanding that consciousness itself is not-self.",
   },
 ];
-
-// Core concepts of liberation
-const liberationConcepts = [
-  {
-    title: "Non-Self (Anattā)",
-    description:
-      "The understanding that there is no permanent, unchanging self or soul.",
-    practices: [
-      "Meditation on the changing nature of experience",
-      "Contemplation of the five khandas",
-      "Observing how identity shifts with circumstances",
-    ],
-  },
-  {
-    title: "Impermanence (Anicca)",
-    description:
-      "All phenomena are in constant flux and nothing lasts forever.",
-    practices: [
-      "Observing change in material possessions",
-      "Reflecting on life's transitions",
-      "Understanding wealth as a flow rather than fixed possession",
-    ],
-  },
-  {
-    title: "Suffering (Dukkha)",
-    description:
-      "The inherent unsatisfactoriness in clinging to impermanent phenomena.",
-    practices: [
-      "Recognizing attachment to wealth as a source of anxiety",
-      "Observing how desires create dissatisfaction",
-      "Understanding the limitations of material security",
-    ],
-  },
-];
 ---
 
 <Layout title="Pathways to Liberation | The Pathway to Buddhism">
@@ -93,6 +59,59 @@ const liberationConcepts = [
     subtitle="Exploring the Buddhist understanding of self, existence, and the path to freedom from suffering"
     bgImage="/asian-rel/images/liberation-hero.jpg"
   />
+
+  <!-- Anattā Section -->
+  <section class="section-padding">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <h2 class="text-3xl font-serif mb-6">
+            Understanding Not-Self (Anattā)
+          </h2>
+          <p class="text-neutral-700 mb-6">
+            At the heart of Buddhist teaching lies the profound concept of
+            Anattā (not-self), which challenges our fundamental assumptions
+            about identity and existence. This teaching reveals that no
+            unchanging, permanent essence can be found in any phenomenon,
+            including our sense of self.
+          </p>
+          <p class="text-neutral-700 mb-6">
+            When we deeply examine our experience, we find that in humans, there
+            is no core, fundamental substance that can truly be called "I" or
+            "me." Everything we typically identify as self is actually a dynamic
+            process of constantly changing elements.
+          </p>
+
+          <div
+            class="bg-primary-50 border-l-4 border-primary-500 p-4 my-8 rounded-r-lg"
+          >
+            <h3 class="text-xl font-serif text-primary-800 mb-2">
+              Important Note
+            </h3>
+            <p class="text-neutral-700">
+              The teaching of not-self doesn't mean you don't exist. Rather, it
+              invites us to understand our true nature beyond fixed concepts of
+              identity.
+            </p>
+          </div>
+
+          <p class="text-neutral-700">
+            Buddha emphasized the importance of knowing both what we are and
+            what we aren't. This understanding leads not to nihilism, but to a
+            profound liberation from the constraints of rigid self-identity and
+            the suffering it creates.
+          </p>
+        </div>
+        <div data-aos="fade-left">
+          <img
+            src="/asian-rel/images/gallery/anatta-concept.jpg"
+            alt="Visual representation of Anattā"
+            class="rounded-lg shadow-lg w-full"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Five Khandas Section -->
   <section class="section-padding">
@@ -119,42 +138,6 @@ const liberationConcepts = [
                 <p class="text-sm text-neutral-600">
                   <strong>Insight:</strong> {khanda.insight}
                 </p>
-              </div>
-            </div>
-          ))
-        }
-      </div>
-    </div>
-  </section>
-
-  <!-- Liberation Concepts -->
-  <section class="section-padding bg-neutral-100">
-    <div class="container mx-auto px-4">
-      <SectionHeading
-        title="Core Concepts of Liberation"
-        subtitle="Understanding the three marks of existence and their role in liberation"
-      />
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {
-          liberationConcepts.map((concept, index) => (
-            <div
-              class="bg-white p-6 rounded-lg shadow-md"
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
-            >
-              <h3 class="text-xl font-serif mb-4">{concept.title}</h3>
-              <p class="text-neutral-700 mb-6">{concept.description}</p>
-              <div class="space-y-2">
-                <h4 class="font-medium text-primary-600">Practices:</h4>
-                <ul class="space-y-2">
-                  {concept.practices.map((practice) => (
-                    <li class="flex items-start gap-2">
-                      <span class="text-primary-600">•</span>
-                      <span class="text-neutral-700 text-sm">{practice}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
             </div>
           ))
