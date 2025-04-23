@@ -26,26 +26,24 @@ const debateTopics = [
 ];
 
 // Unintentional violence examples
-const unintentionalExamples = [
+const unintentionalActions = [
   {
-    icon: "fireworks",
-    label: "Fireworks",
-    description: "Consider the impact on animals and sensitive individuals",
+    title: "Fireworks",
+    description:
+      "While fireworks are often used in celebrations, they can cause significant distress to animals, veterans with PTSD, and sensitive individuals. Consider the broader impact of celebratory activities and seek alternatives that don't create unintended harm.",
+    image: "/asian-rel/images/gallery/fireworks.jpg",
   },
   {
-    icon: "range",
-    label: "Shooting Range",
-    description: "Practice safety and awareness of surrounding areas",
+    title: "Shooting Range",
+    description:
+      "Even in controlled environments like shooting ranges, the sound and impact can affect surrounding communities and wildlife. Practice awareness of how recreational activities might impact others and take precautions to minimize disturbance.",
+    image: "/asian-rel/images/gallery/range.jpg",
   },
   {
-    icon: "celebration",
-    label: "Celebratory Actions",
-    description: "Be mindful of unintended consequences of celebrations",
-  },
-  {
-    icon: "driving",
-    label: "Drowsy Driving",
-    description: "Rest when tired to prevent accidents",
+    title: "Drowsy Driving",
+    description:
+      "Driving while tired might seem unavoidable, but it poses serious risks to yourself and others. Being mindful of our limitations and making responsible choices about when to rest helps prevent unintentional harm on the roads.",
+    image: "/asian-rel/images/gallery/driving.jpg",
   },
 ];
 ---
@@ -211,24 +209,80 @@ const unintentionalExamples = [
         subtitle="Being aware of unintentional harm in everyday activities"
       />
 
-      <div class="flex flex-wrap justify-center gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {
-          unintentionalExamples.map((example) => (
-            <div class="group relative w-32 text-center" data-aos="fade-up">
-              <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <img
-                  src={`/asian-rel/images/icons/${example.icon}.svg`}
-                  alt={example.label}
-                  class="w-12 h-12 mx-auto mb-2"
-                />
-                <p class="text-sm font-medium">{example.label}</p>
-              </div>
-              <div class="opacity-0 group-hover:opacity-100 absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 bg-neutral-800 text-white text-sm rounded-lg p-3 transition-opacity">
-                <p>{example.description}</p>
+          unintentionalActions.map((item, index) => (
+            <div
+              class="group relative overflow-hidden rounded-lg aspect-[4/3] bg-neutral-800 cursor-pointer gallery-item"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+              data-item={index}
+              data-unintentional-item
+            >
+              <img
+                src={item.image}
+                alt={item.title}
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-6">
+                <h3 class="text-white text-xl font-serif mb-2">{item.title}</h3>
+                <p class="text-neutral-200 text-sm line-clamp-2">
+                  Click to learn more
+                </p>
               </div>
             </div>
           ))
         }
+      </div>
+
+      <!-- Unintentional Actions Modal -->
+      <div
+        id="unintentional-modal"
+        class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden p-4"
+      >
+        <div class="bg-white rounded-lg w-full max-w-3xl overflow-hidden">
+          <div class="flex justify-between items-start p-6 pb-2">
+            <h3
+              id="unintentional-title"
+              class="text-3xl font-serif text-primary-700"
+            >
+              Action
+            </h3>
+            <button
+              id="close-unintentional-modal"
+              class="text-neutral-500 hover:text-neutral-800"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="p-6 pt-2">
+            <p
+              id="unintentional-description"
+              class="text-neutral-700 leading-relaxed text-lg"
+            >
+            </p>
+          </div>
+          <div class="bg-neutral-100 px-6 py-4 flex justify-end">
+            <button
+              id="unintentional-close-btn"
+              class="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2 rounded-md transition-colors text-sm"
+            >
+              Close
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -281,6 +335,68 @@ const unintentionalExamples = [
           arrow.style.transform = "rotate(180deg)";
         }
       });
+    });
+
+    // Unintentional Actions Modal functionality
+    const items = document.querySelectorAll("[data-unintentional-item]");
+    const modal = document.getElementById("unintentional-modal");
+    const modalTitle = document.getElementById("unintentional-title");
+    const modalDescription = document.getElementById(
+      "unintentional-description"
+    );
+    const closeModalBtns = [
+      document.getElementById("close-unintentional-modal"),
+      document.getElementById("unintentional-close-btn"),
+    ];
+
+    const unintentionalActions = [
+      {
+        title: "Fireworks",
+        description:
+          "While fireworks are often used in celebrations, they can cause significant distress to animals, veterans with PTSD, and sensitive individuals. Consider the broader impact of celebratory activities and seek alternatives that don't create unintended harm.",
+      },
+      {
+        title: "Shooting Range",
+        description:
+          "Even in controlled environments like shooting ranges, the sound and impact can affect surrounding communities and wildlife. Practice awareness of how recreational activities might impact others and take precautions to minimize disturbance.",
+      },
+      {
+        title: "Drowsy Driving",
+        description:
+          "Driving while tired might seem unavoidable, but it poses serious risks to yourself and others. Being mindful of our limitations and making responsible choices about when to rest helps prevent unintentional harm on the roads.",
+      },
+    ];
+
+    function openModal(index) {
+      const item = unintentionalActions[index];
+      if (item) {
+        modalTitle.textContent = item.title;
+        modalDescription.textContent = item.description;
+        modal.classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+      }
+    }
+
+    function closeModal() {
+      modal.classList.add("hidden");
+      document.body.style.overflow = "";
+    }
+
+    items.forEach((item) => {
+      item.addEventListener("click", () => {
+        const index = parseInt(item.getAttribute("data-item") || "0");
+        openModal(index);
+      });
+    });
+
+    closeModalBtns.forEach((btn) => {
+      btn?.addEventListener("click", closeModal);
+    });
+
+    modal?.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
     });
   });
 </script>
