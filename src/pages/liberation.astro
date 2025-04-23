@@ -1,0 +1,298 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import SectionHeading from "../components/SectionHeading.astro";
+
+// Five Khandas data
+const khandas = [
+  {
+    id: "form",
+    title: "Form (Rūpa)",
+    description:
+      "Physical matter and the material world, including the body and sensory objects.",
+    example: "Material possessions, wealth, and physical resources",
+    insight:
+      "Wealth and material forms are impermanent and subject to change, making attachment to them a source of suffering.",
+  },
+  {
+    id: "feeling",
+    title: "Feeling (Vedanā)",
+    description:
+      "Sensory and emotional experiences, whether pleasant, unpleasant, or neutral.",
+    example: "The emotional responses to gaining or losing wealth",
+    insight:
+      "Our reactions to financial gains and losses reveal attachments that can cause suffering.",
+  },
+  {
+    id: "cognition",
+    title: "Perception (Saññā)",
+    description:
+      "Recognition and interpretation of sensory and mental experiences.",
+    example: "How we perceive money as security or status",
+    insight:
+      "Our conceptual understanding of wealth often creates false narratives of security and self-worth.",
+  },
+  {
+    id: "formations",
+    title: "Mental Formations (Saṅkhāra)",
+    description:
+      "Thoughts, intentions, and mental constructs that shape our actions.",
+    example: "Financial planning, desire for wealth accumulation",
+    insight:
+      "Our mental constructs about wealth often lead to anxiety and attachment.",
+  },
+  {
+    id: "consciousness",
+    title: "Consciousness (Viññāṇa)",
+    description:
+      "Awareness and processing of experiences through the six sense doors.",
+    example: "Awareness of financial status and its impact on identity",
+    insight:
+      "True liberation comes from understanding that consciousness itself is not-self.",
+  },
+];
+
+// Core concepts of liberation
+const liberationConcepts = [
+  {
+    title: "Non-Self (Anattā)",
+    description:
+      "The understanding that there is no permanent, unchanging self or soul.",
+    practices: [
+      "Meditation on the changing nature of experience",
+      "Contemplation of the five khandas",
+      "Observing how identity shifts with circumstances",
+    ],
+  },
+  {
+    title: "Impermanence (Anicca)",
+    description:
+      "All phenomena are in constant flux and nothing lasts forever.",
+    practices: [
+      "Observing change in material possessions",
+      "Reflecting on life's transitions",
+      "Understanding wealth as a flow rather than fixed possession",
+    ],
+  },
+  {
+    title: "Suffering (Dukkha)",
+    description:
+      "The inherent unsatisfactoriness in clinging to impermanent phenomena.",
+    practices: [
+      "Recognizing attachment to wealth as a source of anxiety",
+      "Observing how desires create dissatisfaction",
+      "Understanding the limitations of material security",
+    ],
+  },
+];
+---
+
+<Layout title="Pathways to Liberation | The Pathway to Buddhism">
+  <Hero
+    title="Pathways to Liberation"
+    subtitle="Exploring the Buddhist understanding of self, existence, and the path to freedom from suffering"
+    bgImage="/asian-rel/images/liberation-hero.jpg"
+  />
+
+  <!-- Five Khandas Section -->
+  <section class="section-padding">
+    <div class="container mx-auto px-4">
+      <SectionHeading
+        title="The Five Khandas"
+        subtitle="Understanding the components that make up human experience and the illusion of self"
+      />
+
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+        {
+          khandas.map((khanda, index) => (
+            <div
+              class="bg-white p-6 rounded-lg shadow-md border-t-4 border-primary-500"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+            >
+              <h3 class="text-xl font-serif mb-3">{khanda.title}</h3>
+              <p class="text-neutral-700 text-sm mb-4">{khanda.description}</p>
+              <div class="bg-primary-50 p-4 rounded-md">
+                <p class="text-sm text-neutral-600 mb-2">
+                  <strong>Example:</strong> {khanda.example}
+                </p>
+                <p class="text-sm text-neutral-600">
+                  <strong>Insight:</strong> {khanda.insight}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Liberation Concepts -->
+  <section class="section-padding bg-neutral-100">
+    <div class="container mx-auto px-4">
+      <SectionHeading
+        title="Core Concepts of Liberation"
+        subtitle="Understanding the three marks of existence and their role in liberation"
+      />
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {
+          liberationConcepts.map((concept, index) => (
+            <div
+              class="bg-white p-6 rounded-lg shadow-md"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+            >
+              <h3 class="text-xl font-serif mb-4">{concept.title}</h3>
+              <p class="text-neutral-700 mb-6">{concept.description}</p>
+              <div class="space-y-2">
+                <h4 class="font-medium text-primary-600">Practices:</h4>
+                <ul class="space-y-2">
+                  {concept.practices.map((practice) => (
+                    <li class="flex items-start gap-2">
+                      <span class="text-primary-600">•</span>
+                      <span class="text-neutral-700 text-sm">{practice}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Wealth and Attachment Section -->
+  <section class="section-padding">
+    <div class="container mx-auto px-4">
+      <SectionHeading
+        title="Understanding Wealth and Attachment"
+        subtitle="Buddhist perspectives on material wealth and the nature of possession"
+      />
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-right">
+          <h3 class="text-xl font-serif mb-4">Wealth as Process</h3>
+          <p class="text-neutral-700 mb-4">
+            Buddhism views wealth not as a fixed possession but as a flowing
+            process, much like a river. Understanding this impermanent nature
+            helps reduce attachment and anxiety around material resources.
+          </p>
+          <ul class="space-y-3 text-sm text-neutral-700">
+            <li class="flex items-start gap-2">
+              <span class="text-primary-600">•</span>
+              <span
+                >Money flows in and out like water, never truly "possessed"</span
+              >
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-primary-600">•</span>
+              <span
+                >Attachment to wealth creates fear of loss and anxiety about the
+                future</span
+              >
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-primary-600">•</span>
+              <span
+                >True security comes from understanding impermanence, not
+                accumulation</span
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-left">
+          <h3 class="text-xl font-serif mb-4">Beyond Material Identity</h3>
+          <p class="text-neutral-700 mb-4">
+            The attachment to wealth as a source of identity or security is seen
+            as an illusion that perpetuates suffering. Liberation comes from
+            seeing through this misconception.
+          </p>
+          <ul class="space-y-3 text-sm text-neutral-700">
+            <li class="flex items-start gap-2">
+              <span class="text-primary-600">•</span>
+              <span>Self-worth independent of material possession</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-primary-600">•</span>
+              <span>Using wealth skillfully without being defined by it</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-primary-600">•</span>
+              <span
+                >Finding peace through understanding the true nature of
+                possession</span
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation Section -->
+  <section class="py-12 bg-primary-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-serif text-center mb-8">
+        Continue Your Exploration
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <a
+          href="/asian-rel/eightfold-path"
+          class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex items-center"
+        >
+          <div class="mr-4 text-primary-600">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-8 h-8"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-serif">The Eightfold Path</h3>
+            <p class="text-neutral-700 text-sm">
+              Practical steps toward liberation from suffering
+            </p>
+          </div>
+        </a>
+
+        <a
+          href="/asian-rel/non-harm"
+          class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex items-center"
+        >
+          <div class="mr-4 text-primary-600">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-8 h-8"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-serif">Non-Harm & Ethics</h3>
+            <p class="text-neutral-700 text-sm">
+              Understanding the role of ethical conduct in liberation
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
