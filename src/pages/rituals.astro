@@ -230,103 +230,192 @@ const architectureImages = [
     </div>
   </section>
 
-  <!-- Overview Section -->
-  <section id="overview" class="section-padding bg-neutral-50">
-    <div class="container mx-auto px-4">
-      <SectionHeading
-        title="Begin Your Journey"
-        subtitle="Buddhism offers profound insights into the nature of existence and provides a structured path toward spiritual liberation and inner peace."
-      />
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        {
-          features.map((feature) => (
-            <FeatureCard
-              title={feature.title}
-              description={feature.description}
-              icon={feature.icon}
-              link={feature.link}
-              iconClass={feature.iconClass}
-            />
-          ))
-        }
-      </div>
-    </div>
-  </section>
-
-  <!-- Pathway Preview Section -->
-  <section id="explore" class="section-padding bg-neutral-100">
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div data-aos="fade-right">
-          <img
-            src="/asian-rel/images/pathway-map.jpg"
-            alt="Buddhist Pathway Map"
-            class="rounded-lg shadow-lg w-full"
-          />
-        </div>
-        <div data-aos="fade-left">
-          <h2 class="text-3xl font-serif mb-6">Your Interactive Pathway</h2>
-          <p class="text-neutral-700 mb-6">
-            The Buddhist path is often visualized as a journey up a mountain or
-            through an unfolding lotus. Our interactive map guides you through
-            the key principles and practices, allowing you to explore each
-            aspect of Buddhist thought in depth.
-          </p>
-          <p class="text-neutral-700 mb-8">
-            From understanding the Four Noble Truths that recognize suffering to
-            following the Eightfold Path toward liberation, each step builds
-            upon the previous, creating a comprehensive approach to spiritual
-            development.
-          </p>
-          <a
-            href="/asian-rel/eightfold-path"
-            class="inline-block bg-primary-600 hover:bg-primary-700 text-white font-medium px-6 py-3 rounded-md transition-colors"
-          >
-            Explore the Path
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Sections Grid -->
+  <!-- Four Categories Section -->
   <section class="section-padding">
     <div class="container mx-auto px-4">
       <SectionHeading
-        title="Discover Key Buddhist Concepts"
-        subtitle="Explore the fundamental teachings, practices, and philosophical foundations of Buddhism"
+        title="Key Ideas of Buddhist Devotion"
+        subtitle="Understanding the four fundamental concepts that shape Buddhist devotional practices"
       />
 
-      <ContentGrid items={journeySections} />
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div
+          class="bg-white p-6 rounded-lg shadow-md border-t-4 border-primary-600"
+          data-aos="fade-up"
+        >
+          <h3 class="text-xl font-serif mb-4 text-primary">
+            Adhiṣṭhāna (Spiritual Blessing or Power)
+          </h3>
+          <ul class="space-y-3 mb-4 text-neutral-700">
+            <li class="flex items-start gap-2">
+              <span class="text-primary-600">•</span>
+              <span>A transmittable power, similar to a contagious energy</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-primary-600">•</span>
+              <span>Chants, laying of hands, passing on blessed objects</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-primary-600">•</span>
+              <span>Movement of spiritual energy that one possesses</span>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="bg-white p-6 rounded-lg shadow-md border-t-4 border-gold-600"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <h3 class="text-xl font-serif mb-4 text-gold-600">
+            Nidāna (Connection to Sacred Beings and Objects)
+          </h3>
+          <ul class="space-y-3 mb-4 text-neutral-700">
+            <li class="flex items-start gap-2">
+              <span class="text-gold-600">•</span>
+              <span
+                >Offerings, showing respect to relics, or visiting sacred sites</span
+              >
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-gold-600">•</span>
+              <span
+                >Allows devotees to build a spiritual connection to the Buddha's
+                power</span
+              >
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-gold-600">•</span>
+              <span
+                >Examples include placing flower garlands on Buddha statues and
+                circumambulating stupas to receive blessings</span
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="bg-white p-6 rounded-lg shadow-md border-t-4 border-jade-600"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <h3 class="text-xl font-serif mb-4 text-jade-600">
+            Puñña (Merit or Karmic Fruitfulness)
+          </h3>
+          <ul class="space-y-3 mb-4 text-neutral-700">
+            <li class="flex items-start gap-2">
+              <span class="text-jade-600">•</span>
+              <span
+                >Good deeds generate spiritual merit, which can be transferred
+                to help others</span
+              >
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-jade-600">•</span>
+              <div>
+                <p class="mb-2">Merit is accumulated in three ways:</p>
+                <ul class="list-disc ml-6 space-y-1">
+                  <li>Dāna (generosity)</li>
+                  <li>Sīla (moral conduct)</li>
+                  <li>Bhāvanā (meditation and mental development)</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="bg-white p-6 rounded-lg shadow-md border-t-4 border-neutral-600"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <h3 class="text-xl font-serif mb-4 text-neutral-600">
+            Praṇidhāna (Earnest Vows or Aspirations)
+          </h3>
+          <ul class="space-y-3 mb-4 text-neutral-700">
+            <li class="flex items-start gap-2">
+              <span class="text-neutral-600">•</span>
+              <span
+                >Strong spiritual vows believed to manifest real outcomes</span
+              >
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-neutral-600">•</span>
+              <span
+                >In Mahāyāna Buddhism, devotees take vows such as "May I be
+                reborn in the Buddha's Pure Land," with hope that such
+                aspirations will help lead to enlightenment</span
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Call to Action -->
-  <section class="py-20 bg-primary-600 text-white">
-    <div class="container mx-auto px-4 text-center">
-      <h2
-        class="text-3xl md:text-4xl font-serif mb-6 text-gold-400"
-        data-aos="fade-up"
-      >
-        Ready to Begin Your Journey?
+  <!-- Related Sections Navigation -->
+  <section class="py-12 bg-primary-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-serif text-center mb-8">
+        Continue Your Exploration
       </h2>
-      <p
-        class="text-xl mb-8 max-w-3xl mx-auto"
-        data-aos="fade-up"
-        data-aos-delay="100"
-      >
-        Explore the rich traditions, profound philosophy, and practical wisdom
-        of Buddhism.
-      </p>
-      <a
-        href="/asian-rel/history"
-        class="inline-block bg-white text-primary-700 font-medium px-8 py-3 rounded-md transition-colors hover:bg-neutral-100 text-lg"
-        data-aos="fade-up"
-        data-aos-delay="200"
-      >
-        Start Exploring
-      </a>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <a
+          href="/asian-rel/eightfold-path"
+          class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex items-center"
+        >
+          <div class="mr-4 text-primary-600">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-8 h-8"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-serif">
+              The Four Noble Truths & Eightfold Path
+            </h3>
+            <p class="text-neutral-700 text-sm">
+              The core teachings that followed Buddha's enlightenment
+            </p>
+          </div>
+        </a>
+        <a
+          href="/asian-rel/liberation"
+          class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex items-center"
+        >
+          <div class="mr-4 text-primary-600">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-8 h-8"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-serif">Pathways to Liberation</h3>
+            <p class="text-neutral-700 text-sm">
+              Exploring the Five Khandas and concepts of non-self
+            </p>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
 </Layout>
