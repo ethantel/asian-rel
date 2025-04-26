@@ -7,35 +7,39 @@ import SectionHeading from "../components/SectionHeading.astro";
 const nobleTruths = [
   {
     id: "truth1",
-    title: "The Truth of Suffering (Dukkha)",
+    ethnic: "Dukkha",
+    title: "(The Truth of Suffering)",
     description:
-      "Life inherently involves suffering, dissatisfaction, and discontent. This encompasses physical pain, emotional distress, and the general unsatisfactory nature of existence.",
+      "Suffering is an inescapable characteristic of every being’s existence, realizing the truth in this is where most spiritual journeys begin.",
     application:
-      "Recognizing suffering as a universal experience rather than something to be denied creates space for genuine healing and compassion.",
+      "Understanding that suffering is a universal experience creates space for genuine healing and liberation.",
   },
   {
     id: "truth2",
-    title: "The Truth of the Origin of Suffering (Samudāya)",
+    ethnic: "Samudāya ",
+    title: "(The Truth of the Origin of Suffering)",
     description:
-      "Suffering arises from craving, aversion, and ignorance. Our attachment to desires and resistance to what is, fueled by misunderstanding reality, perpetuates suffering.",
+      "Inevitably selfish desires cause physical and emotional attachments which always lead to dissatisfaction and suffering.",
     application:
-      "By identifying the habits, attachments, and thought patterns that generate suffering in your life, you can begin addressing their root causes.",
+      "By identifying the habits, attachments, and thoughts that generate suffering in your life, one can recognize and address the causes of suffering.",
   },
   {
     id: "truth3",
-    title: "The Truth of the Cessation of Suffering (Nirodha)",
+    ethnic: "Nirodha",
+    title: " (The Truth of the Cessation of Suffering)",
     description:
-      "It is possible to end suffering by relinquishing craving and attachment. The state of freedom from suffering is called Nirvana or Liberation.",
+      "Attachments to our world and the pain that it offers can be severed by confining the craving and reaching nirvana.",
     application:
-      "Understanding that peace is possible provides hope and motivation to pursue spiritual practice, even when the path is challenging.",
+      "Realizing that suffering can end and that peace is possible provides hope and motivation that fuel one’s spiritual practice, leading to liberation.",
   },
   {
     id: "truth4",
-    title: "The Truth of the Path (Magga)",
+    ethnic: "",
+    title: "The Eightfold Path",
     description:
-      "The Eightfold Path is the method that leads to the cessation of suffering. It offers a comprehensive approach to living that cultivates wisdom, ethical conduct, and mental discipline.",
+      "The path one must take in order to confine their desires and attachments to ultimately release themselves from <i>dukkha</i>.",
     application:
-      "Following the Eightfold Path provides practical guidance for daily life decisions, relationships, and personal development.",
+      "Following the path provides guidance for all day-to-day decisions one must make in their life.",
   },
 ];
 
@@ -43,44 +47,44 @@ const nobleTruths = [
 const eightfoldPath = [
   {
     id: "right-understanding",
-    title: "Right Understanding",
+    title: "1. Right Understanding",
     description:
       "Understanding the Four Noble Truths and seeing reality as it is",
   },
   {
     id: "right-intention",
-    title: "Right Intention",
+    title: "2. Right Intention",
     description: "Cultivating thoughts of goodwill, compassion, and non-harm",
   },
   {
     id: "right-speech",
-    title: "Right Speech",
+    title: "3. Right Speech",
     description: "Speaking truthfully, kindly, and beneficially",
   },
   {
     id: "right-action",
-    title: "Right Action",
+    title: "4. Right Action",
     description: "Acting ethically and refraining from harmful behaviors",
   },
   {
     id: "right-livelihood",
-    title: "Right Livelihood",
+    title: "5. Right Livelihood",
     description: "Earning a living in ways that do not harm others",
   },
   {
     id: "right-effort",
-    title: "Right Effort",
+    title: "6. Right Effort",
     description:
       "Cultivating positive mental states and abandoning negative ones",
   },
   {
     id: "right-mindfulness",
-    title: "Right Mindfulness",
+    title: "7. Right Mindfulness",
     description: "Maintaining awareness of body, feelings, mind, and phenomena",
   },
   {
     id: "right-concentration",
-    title: "Right Concentration",
+    title: "8. Right Concentration",
     description: "Developing focused, steady awareness through meditation",
   },
 ];
@@ -89,7 +93,7 @@ const eightfoldPath = [
 <Layout title="Eightfold Path & Four Noble Truths | The Pathway to Buddhism">
   <Hero
     title="The Eightfold Path"
-    subtitle="Exploring the Buddha's guidance for ending suffering and attaining liberation"
+    subtitle="Explore Buddha’s guidance for ending suffering and attaining liberation"
     bgImage="/asian-rel/images/eightfold-path-hero.jpg"
     overlayOpacity="opacity-60"
   />
@@ -99,7 +103,7 @@ const eightfoldPath = [
     <div class="container mx-auto px-4">
       <SectionHeading
         title="The Four Noble Truths"
-        subtitle="The foundational insights that form the core of Buddhist understanding"
+        subtitle="The foundational steps in understanding the teachings of Buddha"
       />
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -110,8 +114,10 @@ const eightfoldPath = [
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
-              <h3 class="text-xl font-serif mb-4">{truth.title}</h3>
-              <p class="text-neutral-700 mb-4">{truth.description}</p>
+              <h3 class="text-xl font-serif mb-4">
+                <i>{truth.ethnic}</i> {truth.title}
+              </h3>
+              <p class="text-neutral-700 mb-4" set:html={truth.description} />
 
               <div class="bg-primary-50 p-4 rounded-md">
                 <h4 class="font-medium mb-2">Practical Application:</h4>
@@ -140,6 +146,12 @@ const eightfoldPath = [
           id="path-wheel"
         />
       </div>
+
+      <!-- prompt message -->
+      <p class="text-center text-neutral-300 italic mb-8">
+        Click on any path elements below to learn more about its meaning and
+        application!
+      </p>
 
       <!-- Path Elements Cards -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -491,8 +503,8 @@ const eightfoldPath = [
     function openPathModal(pathId) {
       const path = pathData[pathId];
       if (path) {
-        modalTitle.textContent = path.title;
-        modalEthnic.textContent = path.ethnic;
+        modalTitle.textContent = path.ethnic;
+        modalEthnic.textContent = path.title;
         modalDescription.textContent = path.description;
         modalQuote.textContent = path.quote;
         modalApplication.textContent = path.application;
