@@ -82,38 +82,43 @@ const architectureImages = [
   {
     title: "Stupa",
     description:
-      "A stupa is a dome-shaped structure that serves as a monument housing relics of the Buddha or other revered figures. It symbolizes the Buddha's enlightenment and acts as a focal point for meditation and pilgrimage. The design of a stupa often reflects the cosmic structure, representing the path to enlightenment.",
+      "A stupa is a monument with the purpose to symbolically show practitioners the path to liberation and enlightenment, giving them the opportunity to make offerings and to help them purify their negativity into merit and wisdom, ultimately creating the atmosphere and space to reach the state of the Buddha.",
     image: "/asian-rel/images/gallery/stupa.jpg",
   },
   {
-    title: "Vihara",
-    description:
-      "A vihara is a Buddhist monastery that provides living quarters for monks. These structures typically consist of a central hall surrounded by small cells for individual monks. Viharas serve as centers for spiritual learning, meditation, and communal living.",
-    image: "/asian-rel/images/gallery/vihara.jpg",
+    title: "Pagoda",
+    description: `Derived from the stupa, a pagoda is a structure traditionally symbolizing sacred mountains and used to house relics or the remains of saints and kings.
+
+          As Buddhism grew, Southeast Asian countries adapted pagodas to take on a pyramidal or conical shape (right), while East Asian countries evolved them into tall, tower-like structures (left).`,
+    image: "/asian-rel/images/gallery/pagoda.png",
   },
   {
-    title: "Chaitya",
-    description:
-      "A chaitya, or chaitya griha, is a prayer hall that houses a stupa at one end. Designed for congregational worship, these halls feature high ceilings and a central nave, allowing devotees to circumambulate the stupa as part of their ritual practice.",
-    image: "/asian-rel/images/gallery/chaitya.jpg",
+    title: "Bowing & Offerings",
+    description: `Bowing is a universal Buddhist practice, showing humility and respect, following the Buddhist emphasis on reducing one’s arrogance and pride.
+
+          Offerings are common amongst practitioners who wish to strengthen their spiritual connection to the Buddha and its teachings.`,
+    image: "/asian-rel/images/gallery/bowing.png",
   },
   {
     title: "Lotus Flower",
-    description:
-      "The lotus flower is a powerful symbol of purity, spiritual awakening, and the true nature of beings. Emerging unsullied from muddy waters, the lotus signifies the potential to rise above suffering and attain enlightenment. It is often associated with the Buddha and is prevalent in Buddhist art and literature.",
-    image: "/asian-rel/images/gallery/lotus.jpg",
+    description: `A common flower offering and symbol in Buddhism that represents impermanence.
+
+          Blooming above muddy waters untouched, the lotus signifies our potential to rise above suffering and achieve full enlightenment.
+
+          “Just as this flower fades, so my body moves towards destruction.” - Theravada Offering Verse`,
+    image: "/asian-rel/images/gallery/lotus.png",
   },
   {
-    title: "Candelesticks & Incense",
+    title: "Incense & Candles",
     description:
-      "Candlesticks and incense are integral to Buddhist rituals, symbolizing the light of wisdom dispelling ignorance. Lighting candles and burning incense during ceremonies represents the offering of one's intentions and prayers, creating a sacred atmosphere conducive to meditation and reflection.",
-    image: "/asian-rel/images/gallery/incense.jpg",
+      "Integral to Buddhist rituals, lighting incense and candles represents the offering of one’s intentions and prayers, creating a sacred atmosphere of purity, perfect for meditation and reflection.",
+    image: "/asian-rel/images/gallery/candles.png",
   },
   {
-    title: "Triratna",
+    title: "The Three Jewels",
     description:
-      "The Triratna, or Three Jewels, represents the core of Buddhist belief: the Buddha (the enlightened one), the Dharma (the teachings), and the Sangha (the community of practitioners). These symbols are often depicted in art and architecture, serving as reminders of the foundational aspects of Buddhism.",
-    image: "/asian-rel/images/gallery/triratna.jpg",
+      "The three jewels represent Buddha, Dharma (ultimate way of reality), and Sangha (spiritual community). Taking refuge, or finding guidance, inspiration, and support from the Three Jewels during one’s spiritual journey is a fundamental step in the act of becoming Buddhist.",
+    image: "/asian-rel/images/gallery/jewels.png",
   },
 ];
 ---
@@ -122,11 +127,196 @@ const architectureImages = [
   <Hero
     title="Rituals & Symbols"
     subtitle="Explore the devotional practices, rituals, and symbols that connect practitioners to the teachings of Buddhism."
-    bgImage="/asian-rel/images/rituals-hero.jpg"
+    bgImage="/asian-rel/images/rituals.jpg"
   />
 
+  <!-- Saddhā Section -->
+  <section class="section-padding">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <h2 class="text-4xl font-serif mb-4">सद्धा</h2>
+          <p class="text-4xl text-neutral-600 mb-6">Saddhā</p>
+
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="text-primary-600 text-xl">•</span>
+              <p class="text-neutral-700">
+                A concept like "faith" or "trustful confidence" in Buddhism,
+                saddhā is a movement of the heart towards action
+              </p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-primary-600 text-xl">•</span>
+              <p class="text-neutral-700">
+                A quality that must be balanced by wisdom, and as a preparation
+                or accompaniment of meditation
+              </p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-primary-600 text-xl">•</span>
+              <p class="text-neutral-700">
+                Given this Buddhist quality, devotion plays an important part in
+                the lives of most of its followers
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div data-aos="fade-left">
+          <img
+            src="/asian-rel/images/gallery/saddha-concept.png"
+            alt="Visual representation of Saddhā"
+            class="rounded-lg shadow-lg w-full"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Four Categories Section -->
+  <section class="section-padding bg-neutral-100">
+    <div class="container mx-auto px-4">
+      <SectionHeading
+        title="Key Ideas of Buddhist Devotion"
+        subtitle="Understanding the four fundamental concepts that shape Buddhist devotional practices"
+      />
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div
+          class="bg-white p-6 rounded-lg shadow-md border-t-4 border-primary-600"
+          data-aos="fade-up"
+        >
+          <h3 class="text-xl font-serif mb-4 text-primary">
+            <i>Adhiṣṭhāna</i> (Spiritual Power)
+          </h3>
+          <ul class="space-y-3 mb-4 text-neutral-700">
+            <li class="flex items-start gap-2">
+              <span class="text-primary-600">•</span>
+              <span
+                >‘Influence or blessing, a kind of power that passes from one
+                person to the next like a contagious disease.’</span
+              >
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-primary-600">•</span>
+              <span
+                >A blessing that may be conveyed through a short chant, a laying
+                of hands, or the passing on of a blessed object to chanting
+                monks</span
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="bg-white p-6 rounded-lg shadow-md border-t-4 border-gold-600"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <h3 class="text-xl font-serif mb-4 text-gold-600">
+            <i>Nidāna</i> (Connection to Sacred Beings)
+          </h3>
+          <ul class="space-y-3 mb-4 text-neutral-700">
+            <li class="flex items-start gap-2">
+              <span class="text-gold-600">•</span>
+              <span
+                >A connection or physical proximity that allows adhiṣṭhāna to
+                pass from one thing or person to another</span
+              >
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-gold-600">•</span>
+              <span
+                >Occurs most commonly when a person makes offerings or shows
+                devotion to an image, monument, or other person that is
+                connected to the Buddha, with an open heart
+              </span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-gold-600">•</span>
+              <span
+                >Allows devotees to build a spiritual connection to the Buddhas
+                power
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="bg-white p-6 rounded-lg shadow-md border-t-4 border-jade-600"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <h3 class="text-xl font-serif mb-4 text-jade-600">
+            <i>Puñña</i> (Merit)
+          </h3>
+          <ul class="space-y-3 mb-4 text-neutral-700">
+            <li class="flex items-start gap-2">
+              <span class="text-jade-600">•</span>
+              <span>“Karmic fruitfulness.”</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-jade-600">•</span>
+              <span
+                >The positive power or energy of goodness that can be activated
+                and directed to whatever goal one may choose</span
+              >
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-jade-600">•</span>
+              <span
+                >Most abundant when giving to those who are rich in adhiṣṭhāna
+                or out of passion to those in need</span
+              >
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-jade-600">•</span>
+              <div>
+                <p class="mb-2">Can be accumulated in three ways:</p>
+                <ul class="list-disc ml-6 space-y-1">
+                  <li><i>Dāna</i> (generosity)</li>
+                  <li><i>Sīla</i> (moral conduct)</li>
+                  <li><i>Bhāvanā</i> (meditation and mental development)</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="bg-white p-6 rounded-lg shadow-md border-t-4 border-neutral-600"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <h3 class="text-xl font-serif mb-4 text-neutral-600">
+            <i>Praṇidhāna</i> (Vows)
+          </h3>
+          <ul class="space-y-3 mb-4 text-neutral-700">
+            <li class="flex items-start gap-2">
+              <span class="text-neutral-600">•</span>
+              <span
+                >An earnest wish or prayerful vow that carries the power to
+                accomplish its positive purpose</span
+              >
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-neutral-600">•</span>
+              <span
+                >“Many Buddhist ceremonies and rituals are basically about
+                making a connection that will cause <i>adhiṣṭhāna</i> to flow, then
+                performing actions that will generate <i>puñña</i> and then dedicating
+                the <i>puñña</i> in the form of <i>praṇidhānas</i> for the general
+                good as well as for specific purposes.”</span
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Gallery Section -->
-  <section id="sites" class="section-padding bg-neutral-100">
+  <section id="sites" class="section-padding">
     <div class="container mx-auto px-4">
       <SectionHeading
         title="Sacred Sites & Symbols"
@@ -230,129 +420,6 @@ const architectureImages = [
     </div>
   </section>
 
-  <!-- Four Categories Section -->
-  <section class="section-padding">
-    <div class="container mx-auto px-4">
-      <SectionHeading
-        title="Key Ideas of Buddhist Devotion"
-        subtitle="Understanding the four fundamental concepts that shape Buddhist devotional practices"
-      />
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div
-          class="bg-white p-6 rounded-lg shadow-md border-t-4 border-primary-600"
-          data-aos="fade-up"
-        >
-          <h3 class="text-xl font-serif mb-4 text-primary">
-            Adhiṣṭhāna (Spiritual Blessing or Power)
-          </h3>
-          <ul class="space-y-3 mb-4 text-neutral-700">
-            <li class="flex items-start gap-2">
-              <span class="text-primary-600">•</span>
-              <span>A transmittable power, similar to a contagious energy</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-primary-600">•</span>
-              <span>Chants, laying of hands, passing on blessed objects</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-primary-600">•</span>
-              <span>Movement of spiritual energy that one possesses</span>
-            </li>
-          </ul>
-        </div>
-
-        <div
-          class="bg-white p-6 rounded-lg shadow-md border-t-4 border-gold-600"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <h3 class="text-xl font-serif mb-4 text-gold-600">
-            Nidāna (Connection to Sacred Beings and Objects)
-          </h3>
-          <ul class="space-y-3 mb-4 text-neutral-700">
-            <li class="flex items-start gap-2">
-              <span class="text-gold-600">•</span>
-              <span
-                >Offerings, showing respect to relics, or visiting sacred sites</span
-              >
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-gold-600">•</span>
-              <span
-                >Allows devotees to build a spiritual connection to the Buddha's
-                power</span
-              >
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-gold-600">•</span>
-              <span
-                >Examples include placing flower garlands on Buddha statues and
-                circumambulating stupas to receive blessings</span
-              >
-            </li>
-          </ul>
-        </div>
-
-        <div
-          class="bg-white p-6 rounded-lg shadow-md border-t-4 border-jade-600"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <h3 class="text-xl font-serif mb-4 text-jade-600">
-            Puñña (Merit or Karmic Fruitfulness)
-          </h3>
-          <ul class="space-y-3 mb-4 text-neutral-700">
-            <li class="flex items-start gap-2">
-              <span class="text-jade-600">•</span>
-              <span
-                >Good deeds generate spiritual merit, which can be transferred
-                to help others</span
-              >
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-jade-600">•</span>
-              <div>
-                <p class="mb-2">Merit is accumulated in three ways:</p>
-                <ul class="list-disc ml-6 space-y-1">
-                  <li>Dāna (generosity)</li>
-                  <li>Sīla (moral conduct)</li>
-                  <li>Bhāvanā (meditation and mental development)</li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <div
-          class="bg-white p-6 rounded-lg shadow-md border-t-4 border-neutral-600"
-          data-aos="fade-up"
-          data-aos-delay="300"
-        >
-          <h3 class="text-xl font-serif mb-4 text-neutral-600">
-            Praṇidhāna (Earnest Vows or Aspirations)
-          </h3>
-          <ul class="space-y-3 mb-4 text-neutral-700">
-            <li class="flex items-start gap-2">
-              <span class="text-neutral-600">•</span>
-              <span
-                >Strong spiritual vows believed to manifest real outcomes</span
-              >
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-neutral-600">•</span>
-              <span
-                >In Mahāyāna Buddhism, devotees take vows such as "May I be
-                reborn in the Buddha's Pure Land," with hope that such
-                aspirations will help lead to enlightenment</span
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Related Sections Navigation -->
   <section class="py-12 bg-primary-50">
     <div class="container mx-auto px-4">
@@ -443,38 +510,43 @@ const architectureImages = [
       {
         title: "Stupa",
         description:
-          "A stupa is a dome-shaped structure that serves as a monument housing relics of the Buddha or other revered figures. It symbolizes the Buddha's enlightenment and acts as a focal point for meditation and pilgrimage. The design of a stupa often reflects the cosmic structure, representing the path to enlightenment.",
+          "A stupa is a monument with the purpose to symbolically show practitioners the path to liberation and enlightenment, giving them the opportunity to make offerings and to help them purify their negativity into merit and wisdom, ultimately creating the atmosphere and space to reach the state of the Buddha.",
         image: "/asian-rel/images/gallery/stupa.jpg",
       },
       {
-        title: "Vihara",
-        description:
-          "A vihara is a Buddhist monastery that provides living quarters for monks. These structures typically consist of a central hall surrounded by small cells for individual monks. Viharas serve as centers for spiritual learning, meditation, and communal living.",
-        image: "/asian-rel/images/gallery/vihara.jpg",
+        title: "Pagoda",
+        description: `Derived from the stupa, a pagoda is a structure traditionally symbolizing sacred mountains and used to house relics or the remains of saints and kings.
+
+          As Buddhism grew, Southeast Asian countries adapted pagodas to take on a pyramidal or conical shape (right), while East Asian countries evolved them into tall, tower-like structures (left).`,
+        image: "/asian-rel/images/gallery/pagoda.png",
       },
       {
-        title: "Chaitya",
-        description:
-          "A chaitya, or chaitya griha, is a prayer hall that houses a stupa at one end. Designed for congregational worship, these halls feature high ceilings and a central nave, allowing devotees to circumambulate the stupa as part of their ritual practice.",
-        image: "/asian-rel/images/gallery/chaitya.jpg",
+        title: "Bowing & Offerings",
+        description: `Bowing is a universal Buddhist practice, showing humility and respect, following the Buddhist emphasis on reducing one’s arrogance and pride.
+
+          Offerings are common amongst practitioners who wish to strengthen their spiritual connection to the Buddha and its teachings.`,
+        image: "/asian-rel/images/gallery/bowing.png",
       },
       {
         title: "Lotus Flower",
-        description:
-          "The lotus flower is a powerful symbol of purity, spiritual awakening, and the true nature of beings. Emerging unsullied from muddy waters, the lotus signifies the potential to rise above suffering and attain enlightenment. It is often associated with the Buddha and is prevalent in Buddhist art and literature.",
-        image: "/asian-rel/images/gallery/lotus.jpg",
+        description: `A common flower offering and symbol in Buddhism that represents impermanence.
+
+          Blooming above muddy waters untouched, the lotus signifies our potential to rise above suffering and achieve full enlightenment.
+
+          “Just as this flower fades, so my body moves towards destruction.” - Theravada Offering Verse`,
+        image: "/asian-rel/images/gallery/lotus.png",
       },
       {
-        title: "Candelesticks & Incense",
+        title: "Incense & Candles",
         description:
-          "Candlesticks and incense are integral to Buddhist rituals, symbolizing the light of wisdom dispelling ignorance. Lighting candles and burning incense during ceremonies represents the offering of one's intentions and prayers, creating a sacred atmosphere conducive to meditation and reflection.",
-        image: "/asian-rel/images/gallery/incense.jpg",
+          "Integral to Buddhist rituals, lighting incense and candles represents the offering of one’s intentions and prayers, creating a sacred atmosphere of purity, perfect for meditation and reflection.",
+        image: "/asian-rel/images/gallery/candles.png",
       },
       {
-        title: "Triratna",
+        title: "The Three Jewels",
         description:
-          "The Triratna, or Three Jewels, represents the core of Buddhist belief: the Buddha (the enlightened one), the Dharma (the teachings), and the Sangha (the community of practitioners). These symbols are often depicted in art and architecture, serving as reminders of the foundational aspects of Buddhism.",
-        image: "/asian-rel/images/gallery/triratna.jpg",
+          "The three jewels represent Buddha, Dharma (ultimate way of reality), and Sangha (spiritual community). Taking refuge, or finding guidance, inspiration, and support from the Three Jewels during one’s spiritual journey is a fundamental step in the act of becoming Buddhist.",
+        image: "/asian-rel/images/gallery/jewels.png",
       },
     ];
 
@@ -483,7 +555,12 @@ const architectureImages = [
 
       if (item) {
         modalTitle.textContent = item.title;
-        modalDescription.textContent = item.description;
+        //modalDescription.textContent = item.description;
+        modalDescription.innerHTML = item.description
+          .split("\n\n")
+          .map((p) => `<p class="mb-4">${p}</p>`)
+          .join("");
+
         modalImage.src = item.image;
         modalImage.alt = item.title;
         modal.classList.remove("hidden");
