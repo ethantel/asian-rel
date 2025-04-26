@@ -9,25 +9,25 @@ const sightings = [
     id: 'sight1',
     title: 'Old Age',
     image: '/asian-rel/images/sightings/old-age.png',
-    description: 'Encountering an elderly person, Siddhartha realized that aging is inevitable for all beings, confronting mortality for the first time.'
+    description: 'During a chariot ride outside of the palace, Siddartha sees an old man for the first time. Upon asking his chariot driver about the sight, he realizes that when people get older, they physically decline, confronting the consequences of mortality for the first time.'
   },
   {
     id: 'sight2',
     title: 'Illness',
     image: '/asian-rel/images/sightings/illness.png',
-    description: 'Seeing a person afflicted with disease, the prince understood that sickness affects everyone, regardless of wealth or status.'
+    description: 'He then sees someone afflicted with sickness on the side of the road, upsetting him as it is the first time he has seen any ill person before. He realizes that anyone can get sick during their lives, regardless of who they are.'
   },
   {
     id: 'sight3',
     title: 'Death',
     image: '/asian-rel/images/sightings/death.png',
-    description: 'Witnessing a funeral procession revealed the ultimate truth of mortality, deepening Siddhartha\'s existential questions.'
+    description: 'He sees a dead person being carried along the road, he realizes that death is inevitable, which leaves his mind troubled and sorrowful regarding the sufferings that must be endured in life.'
   },
   {
     id: 'sight4',
-    title: 'Ascetic',
+    title: 'Asceticism',
     image: '/asian-rel/images/sightings/ascetic.png',
-    description: 'Meeting a wandering holy man showed Siddhartha a path of renunciation and seeking, inspiring his departure from palace life.'
+    description: 'Lasty, he sees a holy man walking along the street, a man who has devoted himself to finding the cause of human suffering. This last sight gives him hope that he may be released from the sufferings of the world, inspiring him to follow the ascetic’s example.'
   }
 ];
 ---
@@ -35,9 +35,41 @@ const sightings = [
 <Layout title="History & Origins | The Pathway to Buddhism">
   <Hero 
     title="History & Origins" 
-    subtitle="Exploring the life of Siddhartha Gautama and the beginnings of Buddhist thought" 
-    bgImage="/asian-rel/images/history-hero.jpg"
+    subtitle="Explore the origin of the Buddha and the history of Buddhist philosophy" 
+    bgImage="/asian-rel/images/history.png"
   />
+
+  <!-- Buddha's Life Section -->
+  <section id="buddha" class="section-padding bg-neutral-100">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <img 
+            src="/asian-rel/images/buddha-life.png" 
+            alt="Life of Buddha" 
+            class="rounded-lg shadow-lg w-full w-4/5 mx-auto"
+          />
+        </div>
+        <div data-aos="fade-left">
+          <h2 class="text-3xl font-serif mb-6">Life of Siddhartha Gautama</h2>
+          <p class="text-neutral-700 mb-6">
+            The son of a king, born and raised on what is now the Indian-Nepalese border, Siddhartha Gautama was the prince in a relatively privileged and wealthy family. Growing up sheltered by his father, who confined him to their palace to protect him from the outside world, he became disillusioned with his comfortable lifestyle, a sense of suffering in the form of sickness, old age, and death troubled him greatly. As past pleasures hollowed into empty memories, he left home, adopting the life of a wandering ascetic to embark on a religious and spiritual journey.          </p>
+          <p class="text-neutral-700 mb-6">
+            After learning under various teachers and practicing extreme austerities, he remained unsatisfied with his journey, until experiencing an awakening that marked the end of his spiritual journey. While seated in meditation beneath an asvattha tree, the deepest understanding of the nature of suffering, its cause, its cessation, and the path leading to its cessation overtook Siddartha Gautama. 
+          </p>
+          
+          <blockquote class="border-l-4 border-primary-500 pl-4 italic text-lg my-8">
+            "Buddhism cannot be explained unless we accept that it has its origin in the strong personality of its founder."
+            <footer class="text-neutral-700 mt-2 text-sm">— Étienne Lamotte</footer>
+          </blockquote>
+          
+          <p class="text-neutral-700">
+            Becoming the Buddha, he devoted the rest of his life to teaching the path to cessation of suffering to groups of wanderers and willing householders. By the time of his death, he had established a well-organized community, extracting considerable support from a vast population of followers, Buddhism was born.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Timeline Section -->
   <section id="timeline" class="section-padding">
@@ -71,81 +103,6 @@ const sightings = [
             </div>
           </div>
         ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- Buddha's Life Section -->
-  <section id="buddha" class="section-padding bg-neutral-100">
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div data-aos="fade-right">
-          <img 
-            src="/asian-rel/images/buddha-life.jpg" 
-            alt="Life of Buddha" 
-            class="rounded-lg shadow-lg w-full"
-          />
-        </div>
-        <div data-aos="fade-left">
-          <h2 class="text-3xl font-serif mb-6">Life of Siddhartha Gautama</h2>
-          <p class="text-neutral-700 mb-6">
-            Born a prince in Lumbini (present-day Nepal) around 563 BCE, Siddhartha Gautama lived in luxury, sheltered from the world's suffering. After the four sightings, he left his palace, wife, and infant son to seek understanding of human suffering.
-          </p>
-          <p class="text-neutral-700 mb-6">
-            After six years of ascetic practices and meditation, Gautama achieved enlightenment while meditating under a Bodhi tree. He became known as the Buddha, or "Awakened One," and spent the next 45 years teaching the path to liberation.
-          </p>
-          
-          <blockquote class="border-l-4 border-primary-500 pl-4 italic text-lg my-8">
-            "I teach suffering, its origin, cessation and path. That's all I teach."
-            <footer class="text-neutral-700 mt-2 text-sm">— The Buddha</footer>
-          </blockquote>
-          
-          <p class="text-neutral-700">
-            The Buddha's teachings spread throughout India and eventually across Asia, evolving into various schools and traditions while maintaining core principles about suffering, impermanence, and the path to liberation.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Sacred Texts Section -->
-  <section id="texts" class="section-padding">
-    <div class="container mx-auto px-4">
-      <SectionHeading
-        title="Buddhist Sacred Texts"
-        subtitle="The foundational writings that preserve and transmit Buddhist teachings"
-      />
-      
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up">
-          <h3 class="text-xl font-serif mb-3">Tripitaka (Pali Canon)</h3>
-          <p class="text-neutral-700 mb-4">
-            The earliest collection of Buddhist teachings, preserved in the Pali language. It consists of three "baskets" (pitaka): the Vinaya Pitaka (monastic rules), Sutta Pitaka (discourses), and Abhidhamma Pitaka (philosophical analysis).
-          </p>
-          <p class="text-sm text-neutral-500 italic">
-            Primary texts for Theravada Buddhism
-          </p>
-        </div>
-        
-        <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="100">
-          <h3 class="text-xl font-serif mb-3">Mahayana Sutras</h3>
-          <p class="text-neutral-700 mb-4">
-            Later texts that expanded Buddhist philosophy, including the Heart Sutra, Diamond Sutra, and Lotus Sutra. These writings explored new concepts like emptiness (sunyata), Buddha-nature, and the bodhisattva ideal.
-          </p>
-          <p class="text-sm text-neutral-500 italic">
-            Foundation for Mahayana Buddhist traditions
-          </p>
-        </div>
-        
-        <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
-          <h3 class="text-xl font-serif mb-3">Tibetan Buddhist Canon</h3>
-          <p class="text-neutral-700 mb-4">
-            Includes the Kangyur (Buddha's words) and Tengyur (commentaries), along with tantric texts. This collection preserves many Sanskrit works lost in India and includes unique Vajrayana teachings.
-          </p>
-          <p class="text-sm text-neutral-500 italic">
-            Core texts for Tibetan Buddhist traditions
-          </p>
-        </div>
       </div>
     </div>
   </section>
