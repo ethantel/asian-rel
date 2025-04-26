@@ -23,11 +23,11 @@ const features = [
     link: "/asian-rel/eightfold-path#path",
   },
   {
-    title: "Daily Rituals",
+    title: "Five Khandas",
     description:
-      "Discover the meaningful practices and ceremonies that connect practitioners to Buddhist teachings.",
+      "Learn about the five aggregates that constitute a sentient being and the concept of non-self.",
     icon: "rituals",
-    link: "/asian-rel/rituals",
+    link: "/asian-rel/liberation",
   },
 ];
 
@@ -37,42 +37,42 @@ const journeySections = [
     title: "History & Origins",
     description:
       "The life of Siddhartha Gautama and the beginnings of Buddhist thought and practice.",
-    image: "/asian-rel/images/history.jpg",
+    image: "/asian-rel/images/history.png",
     link: "/asian-rel/history",
   },
   {
     title: "Rituals & Devotion",
     description:
       "Explore the symbolic practices, meditation techniques, and devotional ceremonies.",
-    image: "/asian-rel/images/rituals.jpg",
+    image: "/asian-rel/images/rituals.png",
     link: "/asian-rel/rituals",
   },
   {
     title: "The Four Noble Truths",
     description:
       "Understanding the nature of suffering and its root causes in Buddhist philosophy.",
-    image: "/asian-rel/images/truths.jpg",
+    image: "/asian-rel/images/truths.png",
     link: "/asian-rel/eightfold-path#truths",
   },
   {
     title: "The Eightfold Path",
     description:
       "The structured path of right living and practice leading toward enlightenment.",
-    image: "/asian-rel/images/eightfold.jpg",
+    image: "/asian-rel/images/eightfold.png",
     link: "/asian-rel/eightfold-path#path",
   },
   {
     title: "Pathways to Liberation",
     description:
       "The Five Khandas and philosophical concepts of non-self and impermanence.",
-    image: "/asian-rel/images/liberation.jpg",
+    image: "/asian-rel/images/liberation.png",
     link: "/asian-rel/liberation",
   },
   {
     title: "Non-Harm & Ethics",
     description:
       "Explore Ahimsa and ethical principles that guide conduct toward all living beings.",
-    image: "/asian-rel/images/ethics.jpg",
+    image: "/asian-rel/images/ethics.png",
     link: "/asian-rel/non-harm",
   },
 ];
@@ -81,7 +81,7 @@ const journeySections = [
 <Layout>
   <Hero
     title="The Pathway to Buddhism"
-    subtitle="Explore Four Noble Truths • Eightfold Path • Daily Practice"
+    subtitle="History • Rituals • Eightfold Path • Four Noble Truths • Liberation • Non-Harm"
     ctaText="Begin Your Journey"
     ctaLink="#overview"
     showCTA={true}
@@ -92,7 +92,7 @@ const journeySections = [
     <div class="container mx-auto px-4">
       <SectionHeading
         title="Begin Your Journey"
-        subtitle="Buddhism offers profound insights into the nature of existence and provides a structured path toward spiritual liberation and inner peace."
+        subtitle="Buddhism is an ancient path of understanding, aiming to find freedom in suffering to achieve nirvana and inner peace."
       />
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
@@ -111,44 +111,8 @@ const journeySections = [
     </div>
   </section>
 
-  <!-- Pathway Preview Section -->
-  <section id="explore" class="section-padding bg-neutral-100">
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div data-aos="fade-right">
-          <img
-            src="/asian-rel/images/pathway-map.jpg"
-            alt="Buddhist Pathway Map"
-            class="rounded-lg shadow-lg w-full"
-          />
-        </div>
-        <div data-aos="fade-left">
-          <h2 class="text-3xl font-serif mb-6">Your Interactive Pathway</h2>
-          <p class="text-neutral-700 mb-6">
-            The Buddhist path is often visualized as a journey up a mountain or
-            through an unfolding lotus. Our interactive map guides you through
-            the key principles and practices, allowing you to explore each
-            aspect of Buddhist thought in depth.
-          </p>
-          <p class="text-neutral-700 mb-8">
-            From understanding the Four Noble Truths that recognize suffering to
-            following the Eightfold Path toward liberation, each step builds
-            upon the previous, creating a comprehensive approach to spiritual
-            development.
-          </p>
-          <a
-            href="/asian-rel/eightfold-path"
-            class="inline-block bg-primary-600 hover:bg-primary-700 text-white font-medium px-6 py-3 rounded-md transition-colors"
-          >
-            Explore the Path
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Sections Grid -->
-  <section class="section-padding">
+  <section class="section-padding bg-neutral-100">
     <div class="container mx-auto px-4">
       <SectionHeading
         title="Discover Key Buddhist Concepts"
@@ -173,8 +137,8 @@ const journeySections = [
         data-aos="fade-up"
         data-aos-delay="100"
       >
-        Explore the rich traditions, profound philosophy, and practical wisdom
-        of Buddhism.
+        Explore the rich history, profound philosophy, and practical wisdom of
+        Buddhism.
       </p>
       <a
         href="/asian-rel/history"

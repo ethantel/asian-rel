@@ -20,15 +20,18 @@ const {
 } = Astro.props;
 ---
 
-<section
-  class="relative h-screen flex items-center justify-center text-white overflow-hidden"
-  style={`background-image: url(${bgImage}); background-size: cover; background-position: center;`}
->
-  <!-- Overlay -->
+<section class="relative h-screen flex items-center justify-center text-white">
+  <!-- Background Image Container -->
+  <div
+    class="absolute inset-0 overflow-hidden"
+    style={`background-image: url(${bgImage}); background-size: cover; background-position: center;`}
+  >
+  </div>
+
   <div class={`absolute inset-0 bg-black ${overlayOpacity}`}></div>
 
   <!-- Content -->
-  <div class="relative z-10 text-center max-w-5xl px-4">
+  <div class="relative z-10 text-center max-w-5xl px-4 mx-auto">
     <h1
       class="text-4xl md:text-6xl lg:text-7xl font-serif mb-6"
       data-aos="fade-up"
