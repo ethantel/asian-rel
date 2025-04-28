@@ -9,46 +9,31 @@ const khandas = [
     id: "form",
     title: "Form (Rūpa)",
     description:
-      "Physical matter and the material world, including the body and sensory objects.",
-    example: "Material possessions, wealth, and physical resources",
-    insight:
-      "Wealth and material forms are impermanent and subject to change, making attachment to them a source of suffering.",
+      "Encompasses everything in the physical world, oriented toward physical objects and bodies that we can see, as well as the material we perceive through any sensory function.",
   },
   {
     id: "feeling",
     title: "Feeling (Vedanā)",
     description:
-      "Sensory and emotional experiences, whether pleasant, unpleasant, or neutral.",
-    example: "The emotional responses to gaining or losing wealth",
-    insight:
-      "Our reactions to financial gains and losses reveal attachments that can cause suffering.",
+      "Covers how everything is perceived through us as either pleasant, unpleasant, or neutral. Includes all feelings such as boredom, excitement, pleasure, and pain.",
   },
   {
     id: "cognition",
     title: "Perception (Saññā)",
     description:
-      "Recognition and interpretation of sensory and mental experiences.",
-    example: "How we perceive money as security or status",
-    insight:
-      "Our conceptual understanding of wealth often creates false narratives of security and self-worth.",
+      "The process of perception in which sensory information is received and processed. Includes one’s thoughts, memories, plans, and ideas.",
   },
   {
     id: "formations",
     title: "Mental Formations (Saṅkhāra)",
     description:
-      "Thoughts, intentions, and mental constructs that shape our actions.",
-    example: "Financial planning, desire for wealth accumulation",
-    insight:
-      "Our mental constructs about wealth often lead to anxiety and attachment.",
+      "Refers to the narratives, emotions, desires, concepts, and choices that play a large part in how we understand and interact with the world around us.",
   },
   {
     id: "consciousness",
     title: "Consciousness (Viññāṇa)",
     description:
-      "Awareness and processing of experiences through the six sense doors.",
-    example: "Awareness of financial status and its impact on identity",
-    insight:
-      "True liberation comes from understanding that consciousness itself is not-self.",
+      "The fact of awareness regarding experiences as they happen, never separate from one’s senses.",
   },
 ];
 ---
@@ -57,7 +42,7 @@ const khandas = [
   <Hero
     title="Pathways to Liberation"
     subtitle="Explore the Buddhist understanding of self and the path to freedom from suffering"
-    bgImage="/asian-rel/images/liberation-hero.jpg"
+    bgImage="/asian-rel/images/liberation.png"
   />
 
   <!-- Anattā Section -->
@@ -82,14 +67,14 @@ const khandas = [
             deconstructing our sense of self, we find the only real solution to
             our most fundamental source of anxiety.
           </p>
-
-          <p class="text-neutral-700 mb-6">
+          <blockquote
+            class="border-l-4 border-primary-500 pl-4 italic text-lg my-8"
+          >
             “Not being a real self is intrinsically uncomfortable. Not being a
             real self is also what enables the sense of self to be deconstructed
             and reconstructed, and this deconstruction/reconstruction is what
             the Buddhist spiritual path is about.”
-          </p>
-
+          </blockquote>
           <div
             class="bg-primary-50 border-l-4 border-primary-500 p-4 my-8 rounded-r-lg"
           >
@@ -129,7 +114,7 @@ const khandas = [
     <div class="container mx-auto px-4">
       <SectionHeading
         title="The Five Khandas"
-        subtitle="Understanding the components that make up human experience and the illusion of self"
+        subtitle="Understanding the five groups of conditions and functions that comprise any individual being’s physical and psychological make-up, thus composing the illusion of self."
       />
 
       <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
@@ -142,17 +127,28 @@ const khandas = [
             >
               <h3 class="text-xl font-serif mb-3">{khanda.title}</h3>
               <p class="text-neutral-700 text-sm mb-4">{khanda.description}</p>
-              <div class="bg-primary-50 p-4 rounded-md">
-                <p class="text-sm text-neutral-600 mb-2">
-                  <strong>Example:</strong> {khanda.example}
-                </p>
-                <p class="text-sm text-neutral-600">
-                  <strong>Insight:</strong> {khanda.insight}
-                </p>
-              </div>
             </div>
           ))
         }
+      </div>
+
+      <div class="max-w-3xl mx-auto mt-16 text-center" data-aos="fade-up">
+        <p class="text-neutral-700 text-lg">
+          Together, this set of khandas is a way to describe everything we can
+          know and experience, becoming a useful way of exploring how clinging
+          and attachment cause suffering. Confronting these five aggregates and
+          using them in practice as objects for mindfulness, as well as
+          realizing that they are impersonal and impermanent, helps us to let go
+          of our attachments that revolve around them, allowing our insights
+          into impermanence to develop and deepen further.
+        </p>
+        <div class="mt-6 inline-block">
+          <div class="flex items-center gap-2">
+            <span class="h-0.5 w-12 bg-primary-600"></span>
+            <span class="h-0.5 w-4 bg-primary-400"></span>
+            <span class="h-0.5 w-2 bg-primary-300"></span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -160,67 +156,42 @@ const khandas = [
   <!-- Wealth and Attachment Section -->
   <section class="section-padding">
     <div class="container mx-auto px-4">
-      <SectionHeading
-        title="Understanding Wealth and Attachment"
-        subtitle="Buddhist perspectives on material wealth and the nature of possession"
-      />
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-right">
-          <h3 class="text-xl font-serif mb-4">Wealth as Process</h3>
-          <p class="text-neutral-700 mb-4">
-            Buddhism views wealth not as a fixed possession but as a flowing
-            process, much like a river. Understanding this impermanent nature
-            helps reduce attachment and anxiety around material resources.
-          </p>
-          <ul class="space-y-3 text-sm text-neutral-700">
-            <li class="flex items-start gap-2">
-              <span class="text-primary-600">•</span>
-              <span
-                >Money flows in and out like water, never truly "possessed"</span
-              >
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-primary-600">•</span>
-              <span
-                >Attachment to wealth creates fear of loss and anxiety about the
-                future</span
-              >
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-primary-600">•</span>
-              <span
-                >True security comes from understanding impermanence, not
-                accumulation</span
-              >
-            </li>
-          </ul>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <img
+            src="/asian-rel/images/gallery/attachment-concept.png"
+            alt="Visual representation of Wealth and Attachment"
+            class="rounded-lg shadow-lg w-full"
+          />
         </div>
-
-        <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-left">
-          <h3 class="text-xl font-serif mb-4">Beyond Material Identity</h3>
-          <p class="text-neutral-700 mb-4">
-            The attachment to wealth as a source of identity or security is seen
-            as an illusion that perpetuates suffering. Liberation comes from
-            seeing through this misconception.
+        <div data-aos="fade-left">
+          <h2 class="text-3xl font-serif mb-6">Wealth and Identity</h2>
+          <p class="text-neutral-700 mb-6">
+            Money is a socially constructed symbol bound into the notion of
+            self. Because Buddhism teaches that there is no inherent, permanent
+            self, the idea that one's identity, worth, or control can be
+            maintained through material wealth is completely illusory.
           </p>
-          <ul class="space-y-3 text-sm text-neutral-700">
-            <li class="flex items-start gap-2">
-              <span class="text-primary-600">•</span>
-              <span>Self-worth independent of material possession</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-primary-600">•</span>
-              <span>Using wealth skillfully without being defined by it</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-primary-600">•</span>
-              <span
-                >Finding peace through understanding the true nature of
-                possession</span
-              >
-            </li>
-          </ul>
+          <p class="text-neutral-700 mb-6">
+            Material attachments inevitably lead to ignorance, attachment, and
+            delusion (the three poisons, pictured left). Recognizing and
+            understanding anattā helps to cultivate a contentment with wealth as
+            an illusion by loosening our ego's grasp on material objects as
+            symbols of success and identity, thus diminishing greed and the
+            three poisons as the root of one's suffering.
+          </p>
+
+          <blockquote
+            class="border-l-4 border-primary-500 pl-4 italic text-lg my-8"
+          >
+            "Money is not a thing but a process. Perhaps it's best understood as
+            an energy that is not really mine or yours. Those who understand
+            that it is an empty, socially constructed symbol can use it wisely
+            and compassionately to reduce the world's suffering. Those who use
+            it to become more real end up being used by it, their alienated
+            sense of self clutching a blank check—a promissory note that can
+            never be cashed."
+          </blockquote>
         </div>
       </div>
     </div>
