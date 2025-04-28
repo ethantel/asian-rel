@@ -51,8 +51,8 @@ const unintentionalActions = [
 <Layout title="Non-Harm & Ethics | The Pathway to Buddhism">
   <Hero
     title="Non-Harm & Ethics"
-    subtitle="Exploring Ahimsā and the Buddhist approach to non-violence"
-    bgImage="/asian-rel/images/non-harm-hero.jpg"
+    subtitle="Explore the Buddhist approach to non-violence and ethical living"
+    bgImage="/asian-rel/images/non-harm-hero.png"
   />
 
   <!-- Ahimsā Section -->
@@ -61,7 +61,7 @@ const unintentionalActions = [
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div data-aos="fade-right">
           <h2 class="text-4xl font-serif mb-4">अहिंसा</h2>
-          <p class="text-4xl text-neutral-600 mb-6">Ahiṃsā [əˈhɪmsaː]</p>
+          <p class="text-4xl text-neutral-600 mb-6">Ahiṃsā</p>
 
           <blockquote
             class="border-l-4 border-primary-500 pl-4 italic text-lg my-8"
@@ -78,219 +78,101 @@ const unintentionalActions = [
             <li class="flex items-start gap-3">
               <span class="text-primary-600 text-xl">•</span>
               <p class="text-neutral-700">
-                From the Sanskrit word meaning "non-harming" or "non-injury."
+                From the Sanskrit word meaning “non-harming” or “non-injury,”
+                ahimsā is a central tenet in Buddhist ethics and practice,
+                acting as the principle of refraining from causing any type of
+                harm to any living being.
               </p>
             </li>
             <li class="flex items-start gap-3">
               <span class="text-primary-600 text-xl">•</span>
               <p class="text-neutral-700">
-                Is a central tenet in several Indian religions, including
-                Buddhism, Hinduism, and Jainism.
-              </p>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-primary-600 text-xl">•</span>
-              <p class="text-neutral-700">
-                Principle of refraining from causing harm to any living being,
-                underpinning much of Buddhist ethics and practice.
-              </p>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-primary-600 text-xl">•</span>
-              <p class="text-neutral-700">
-                While perfect non-violence may seem unreachable, Buddhism
-                teaches that every step toward reducing harm is valuable. The
-                goal is not perfection, but constant mindfulness and effort to
-                minimize suffering.
+                In light of what many deem should be exceptions, such as eating
+                plants and animals or acting in self-defense, ahimsā emphasizes
+                a commitment to caution and mindfulness, in that one should
+                reduce and refrain from harm when possible, practicing caution
+                in cases of unintentional violence, avoiding excessiveness if it
+                is necessary and being mindful of inflicting pain on others.
               </p>
             </li>
           </ul>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Debate Section -->
-  <section class="section-padding bg-neutral-100">
-    <div class="container mx-auto px-4">
-      <SectionHeading
-        title="Common Debates"
-        subtitle="Exploring challenging questions about non-harm in practice"
-      />
-
-      <div class="max-w-3xl mx-auto">
-        {
-          debateTopics.map((topic, index) => (
-            <div class="mb-4">
-              <button
-                class="w-full bg-white p-6 rounded-lg shadow-md flex justify-between items-center hover:bg-primary-50 transition-colors"
-                data-topic={topic.id}
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                <h3 class="text-xl font-serif">{topic.title}</h3>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="w-6 h-6 transition-transform"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                  />
-                </svg>
-              </button>
-              <div class="hidden bg-white p-6 rounded-b-lg shadow-md mt-1">
-                <p class="text-neutral-700">{topic.content}</p>
-              </div>
-            </div>
-          ))
-        }
       </div>
     </div>
   </section>
 
   <!-- Deterrence & Retribution Section -->
-  <section class="section-padding">
-    <div class="container mx-auto px-4">
-      <SectionHeading
-        title="Understanding Harm Prevention"
-        subtitle="Examining different approaches to preventing harmful actions"
-      />
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-right">
-          <h3 class="text-xl font-serif mb-4">Deterrence</h3>
-          <p class="text-neutral-700 mb-4">
-            A future-oriented approach focused on preventing harmful actions
-            through awareness and consequences.
-          </p>
-          <ul class="space-y-3 text-sm text-neutral-700">
-            <li class="flex items-start gap-2">
-              <span class="text-primary-600">•</span>
-              <span>Emphasizes education and awareness</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-primary-600">•</span>
-              <span>Focuses on prevention rather than punishment</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-primary-600">•</span>
-              <span>Aligns with Buddhist principles of mindfulness</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-left">
-          <h3 class="text-xl font-serif mb-4">Retribution</h3>
-          <p class="text-neutral-700 mb-4">
-            A past-oriented approach focused on balancing harm with punishment,
-            which can perpetuate cycles of violence.
-          </p>
-          <ul class="space-y-3 text-sm text-neutral-700">
-            <li class="flex items-start gap-2">
-              <span class="text-primary-600">•</span>
-              <span>Can perpetuate cycles of harm</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-primary-600">•</span>
-              <span>Often driven by anger or revenge</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-primary-600">•</span>
-              <span>May conflict with non-harm principles</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Unintentional Violence Section -->
   <section class="section-padding bg-neutral-100">
     <div class="container mx-auto px-4">
       <SectionHeading
-        title="Mindfulness in Daily Actions"
-        subtitle="Being aware of unintentional harm in everyday activities"
+        title="More on Avoiding Violence"
+        subtitle="In cases of deterrence and retribution, punishing someone for their wrongs is not represented in Buddhist doctrines as the Buddha does not teach the value of punishment for punishment’s sake, instead they reach for other ways to restore the offender and to create balance. Buddhism teaches that it is always possible to move in the direction of non-violence, even if perfect execution is unattainable."
+      />
+    </div>
+  </section>
+
+  <!-- Angulimala Story Section -->
+  <section class="section-padding">
+    <div class="container mx-auto px-4">
+      <SectionHeading
+        title="The Story of Angulimala"
+        subtitle="One of the most famous stories in discussing Buddhist teachings of non-violence"
       />
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {
-          unintentionalActions.map((item, index) => (
-            <div
-              class="group relative overflow-hidden rounded-lg aspect-[4/3] bg-neutral-800 cursor-pointer gallery-item"
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
-              data-item={index}
-              data-unintentional-item
-            >
-              <img
-                src={item.image}
-                alt={item.title}
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-6">
-                <h3 class="text-white text-xl font-serif mb-2">{item.title}</h3>
-                <p class="text-neutral-200 text-sm line-clamp-2">
-                  Click to learn more
-                </p>
-              </div>
-            </div>
-          ))
-        }
-      </div>
+      <div class="flex flex-col gap-8 max-w-4xl mx-auto">
+        <!-- Image Container -->
+        <div
+          class="relative w-full max-w-3xl mx-auto rounded-lg overflow-hidden"
+          data-aos="fade-up"
+        >
+          <img
+            src="/asian-rel/images/ethics.png"
+            alt="Illustration of Angulimala's encounter with the Buddha"
+            class="w-full h-auto"
+          />
+        </div>
 
-      <!-- Unintentional Actions Modal -->
-      <div
-        id="unintentional-modal"
-        class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden p-4"
-      >
-        <div class="bg-white rounded-lg w-full max-w-3xl overflow-hidden">
-          <div class="flex justify-between items-start p-6 pb-2">
-            <h3
-              id="unintentional-title"
-              class="text-3xl font-serif text-primary-700"
-            >
-              Action
-            </h3>
-            <button
-              id="close-unintentional-modal"
-              class="text-neutral-500 hover:text-neutral-800"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-6 h-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18L18 6M6 6l12 12"></path>
-              </svg>
-            </button>
-          </div>
-          <div class="p-6 pt-2">
-            <p
-              id="unintentional-description"
-              class="text-neutral-700 leading-relaxed text-lg"
-            >
-            </p>
-          </div>
-          <div class="bg-neutral-100 px-6 py-4 flex justify-end">
-            <button
-              id="unintentional-close-btn"
-              class="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2 rounded-md transition-colors text-sm"
-            >
-              Close
-            </button>
-          </div>
+        <!-- Text Content -->
+        <div class="prose prose-lg max-w-none" data-aos="fade-up">
+          <p class="mb-4">
+            Living during the time that the Buddha walked the Earth, there was a
+            blood-thirsty murderer who terrorized and killed many innocent
+            people, chopping their fingers off and stringing them together to
+            make a necklace, and thus becoming known as Angulimala (translated
+            as Finger Necklace).
+          </p>
+          <p class="mb-4">
+            Having obtained 999 fingers, he noticed the Buddha in proximity and
+            sought him out to complete his collection. Although the Buddha
+            simply and serenely walked unhurriedly ahead of him, Angulimala
+            found that he could not catch up, and eventually exhausted,
+            frustrated, and angry, he yelled at the Buddha to stop.
+          </p>
+          <p class="mb-4">
+            The Buddha turned with neither anger nor fear and directly
+            responded, "Angulimala, I have stopped forever, I abstain from
+            violence towards living beings. But you have no restraint towards
+            things that live. That is why I have stopped and you have not."
+          </p>
+          <p class="mb-4">
+            Moved by his words, Angulimala immediately throws down his weapons
+            and takes refuge in the Buddha, becoming a monk and following his
+            teachings.
+          </p>
+          <p class="mb-4">
+            His life as a monk was met with many vengeful attacks by people who
+            remembered his past, yet he understood and never retaliated against
+            them, for the Buddha explains to him that this was the consequence
+            of his actions and that these attacks are his karmic debt being paid
+            off.
+          </p>
+          <p>
+            Angulimala's path to enlightenment shows the Buddhist principle that
+            no one is inherently and permanently evil beyond redemption, and
+            that non-violence is the ultimate path to escape one's suffering,
+            proving that attaining enlightenment is possible in even the most
+            extreme circumstances.
+          </p>
         </div>
       </div>
     </div>
@@ -303,31 +185,36 @@ const unintentionalActions = [
         class="text-3xl md:text-4xl font-serif mb-6 text-gold-400"
         data-aos="fade-up"
       >
-        Thank You for Exploring Buddhism
+        Thanks for Exploring Buddhism
       </h2>
       <p
         class="text-xl mb-8 max-w-3xl mx-auto"
         data-aos="fade-up"
         data-aos-delay="100"
       >
-        We hope this journey through Buddhist principles of non-harm has
-        provided valuable insights for your path. Remember, every small step
-        toward mindfulness and compassion makes a difference.
+        In learning and engaging with any religious practice, and in obtaining
+        any length of religious literacy, one gains the potential to increase
+        their empathy towards all beings and their individual experiences. In
+        taking the time to explore these profound Buddhist teachings, you have
+        started your path towards enlightenment and have embraced the values of
+        Buddhist traditions. Our motivation in presenting this resource is to
+        highlight the importance of broadening one’s worldly knowledge,
+        emphasizing that increasing one’s religious understanding should be
+        accessible to all.
       </p>
-      <a
-        href="/asian-rel/"
-        class="inline-block bg-white text-primary-700 font-medium px-8 py-3 rounded-md transition-colors hover:bg-neutral-100 text-lg"
-        data-aos="fade-up"
-        data-aos-delay="200"
-      >
-        Return to Main Path
-      </a>
+      <div class="relative group" data-aos="fade-up">
+        <h3
+          class="text-3xl md:text-4xl font-serif mb-6 text-gold-400 transition-opacity duration-300 group-hover:opacity-0"
+        >
+          धन्यवाद
+        </h3>
+        <h3
+          class="text-3xl md:text-4xl font-serif mb-6 text-gold-400 absolute top-0 left-0 w-full opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        >
+          Thank You
+        </h3>
+      </div>
     </div>
-  </section>
-
-  <!-- Navigation Section -->
-  <section class="py-12 bg-primary-50">
-    // ...existing navigation code...
   </section>
 </Layout>
 
