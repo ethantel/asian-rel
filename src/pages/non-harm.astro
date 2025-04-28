@@ -2,57 +2,13 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import SectionHeading from "../components/SectionHeading.astro";
-
-// Debate topics data
-const debateTopics = [
-  {
-    id: "animals",
-    title: "Eating Animals or Plants?",
-    content:
-      "While complete non-harm may seem impossible since even eating plants involves some degree of harm, Buddhism encourages mindful consumption and reducing suffering where possible. Consider the intensity of suffering caused and make conscious choices to minimize harm.",
-  },
-  {
-    id: "defense",
-    title: "Self-Defense?",
-    content:
-      "Buddhism recognizes that sometimes we face situations where harm seems unavoidable. The key is to maintain mindfulness and compassion, using minimal force necessary for protection while avoiding anger or revenge.",
-  },
-  {
-    id: "excess",
-    title: "Excess & Mindfulness",
-    content:
-      "Rather than seeking absolute rules, Buddhism encourages awareness of our actions' consequences. Practice moderation and mindfulness in all activities, being conscious of their impact on others.",
-  },
-];
-
-// Unintentional violence examples
-const unintentionalActions = [
-  {
-    title: "Fireworks",
-    description:
-      "While fireworks are often used in celebrations, they can cause significant distress to animals, veterans with PTSD, and sensitive individuals. Consider the broader impact of celebratory activities and seek alternatives that don't create unintended harm.",
-    image: "/asian-rel/images/gallery/fireworks.jpg",
-  },
-  {
-    title: "Shooting Range",
-    description:
-      "Even in controlled environments like shooting ranges, the sound and impact can affect surrounding communities and wildlife. Practice awareness of how recreational activities might impact others and take precautions to minimize disturbance.",
-    image: "/asian-rel/images/gallery/range.jpg",
-  },
-  {
-    title: "Drowsy Driving",
-    description:
-      "Driving while tired might seem unavoidable, but it poses serious risks to yourself and others. Being mindful of our limitations and making responsible choices about when to rest helps prevent unintentional harm on the roads.",
-    image: "/asian-rel/images/gallery/driving.jpg",
-  },
-];
 ---
 
 <Layout title="Non-Harm & Ethics | The Pathway to Buddhism">
   <Hero
     title="Non-Harm & Ethics"
     subtitle="Explore the Buddhist approach to non-violence and ethical living"
-    bgImage="/asian-rel/images/non-harm-hero.png"
+    bgImage="/asian-rel/images/non-harm-hero.jpg"
   />
 
   <!-- Ahimsā Section -->
@@ -221,25 +177,6 @@ const unintentionalActions = [
 <script>
   // Accordion functionality
   document.addEventListener("DOMContentLoaded", () => {
-    const buttons = document.querySelectorAll("[data-topic]");
-
-    buttons.forEach((button) => {
-      button.addEventListener("click", () => {
-        const content = button.nextElementSibling;
-        const arrow = button.querySelector("svg");
-
-        // Toggle content
-        content.classList.toggle("hidden");
-
-        // Rotate arrow
-        if (content.classList.contains("hidden")) {
-          arrow.style.transform = "rotate(0deg)";
-        } else {
-          arrow.style.transform = "rotate(180deg)";
-        }
-      });
-    });
-
     // Unintentional Actions Modal functionality
     const items = document.querySelectorAll("[data-unintentional-item]");
     const modal = document.getElementById("unintentional-modal");
