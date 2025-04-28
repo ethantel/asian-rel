@@ -48,44 +48,42 @@ const eightfoldPath = [
   {
     id: "right-understanding",
     title: "1. Right Understanding",
-    description:
-      "Understanding the Four Noble Truths and seeing reality as it is",
+    ethnic: "Samma Ditthi",
   },
   {
     id: "right-intention",
     title: "2. Right Intention",
-    description: "Cultivating thoughts of goodwill, compassion, and non-harm",
+    ethnic: "Samma Sankappa",
   },
   {
     id: "right-speech",
     title: "3. Right Speech",
-    description: "Speaking truthfully, kindly, and beneficially",
+    ethnic: "Samma Vaca",
   },
   {
     id: "right-action",
     title: "4. Right Action",
-    description: "Acting ethically and refraining from harmful behaviors",
+    ethnic: "Samma Kammanto",
   },
   {
     id: "right-livelihood",
     title: "5. Right Livelihood",
-    description: "Earning a living in ways that do not harm others",
+    ethnic: "Samma Ajiva",
   },
   {
     id: "right-effort",
     title: "6. Right Effort",
-    description:
-      "Cultivating positive mental states and abandoning negative ones",
+    ethnic: "Samma Vayama",
   },
   {
     id: "right-mindfulness",
     title: "7. Right Mindfulness",
-    description: "Maintaining awareness of body, feelings, mind, and phenomena",
+    ethnic: "Samma Sati",
   },
   {
     id: "right-concentration",
     title: "8. Right Concentration",
-    description: "Developing focused, steady awareness through meditation",
+    ethnic: "Samma Samadhi",
   },
 ];
 ---
@@ -164,7 +162,7 @@ const eightfoldPath = [
               data-aos-delay={index * 50}
             >
               <h3 class="text-xl font-serif mb-3">{path.title}</h3>
-              <p class="text-neutral-700 text-sm">{path.description}</p>
+              <p class="text-neutral-700 text-sm italic">{path.ethnic}</p>
             </div>
           ))
         }
@@ -209,12 +207,6 @@ const eightfoldPath = [
             </div>
             <p id="modal-description" class="text-neutral-700 mb-4"></p>
 
-            <blockquote
-              id="modal-quote"
-              class="border-l-4 border-primary-500 pl-4 italic my-6"
-            >
-            </blockquote>
-
             <div class="bg-primary-50 p-4 rounded-md">
               <h4 class="font-medium mb-2">Practical Application:</h4>
               <p id="modal-application" class="text-neutral-700 text-sm"></p>
@@ -233,114 +225,8 @@ const eightfoldPath = [
     </div>
   </section>
 
-  <!-- Three Categories Section -->
-  <section class="section-padding">
-    <div class="container mx-auto px-4">
-      <SectionHeading
-        title="Three Categories of the Path"
-        subtitle="The Eightfold Path organized into three essential aspects of practice"
-      />
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div
-          class="bg-white p-6 rounded-lg shadow-md border-t-4 border-primary-500"
-          data-aos="fade-up"
-        >
-          <h3 class="text-xl font-serif mb-4">Wisdom (Pañña)</h3>
-          <ul class="space-y-3 mb-4">
-            <li class="flex items-start">
-              <span class="text-primary-600 mr-2">•</span>
-              <span
-                ><strong>Right View</strong> - Understanding reality clearly</span
-              >
-            </li>
-            <li class="flex items-start">
-              <span class="text-primary-600 mr-2">•</span>
-              <span
-                ><strong>Right Intention</strong> - Committing to ethical and mental
-                self-improvement</span
-              >
-            </li>
-          </ul>
-          <p class="text-neutral-700 text-sm">
-            These elements focus on developing the insight and understanding
-            necessary to see things as they truly are, beyond our conditioned
-            perceptions.
-          </p>
-        </div>
-
-        <div
-          class="bg-white p-6 rounded-lg shadow-md border-t-4 border-secondary-500"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <h3 class="text-xl font-serif mb-4">Ethical Conduct (Sīla)</h3>
-          <ul class="space-y-3 mb-4">
-            <li class="flex items-start">
-              <span class="text-primary-600 mr-2">•</span>
-              <span
-                ><strong>Right Speech</strong> - Using words truthfully and kindly</span
-              >
-            </li>
-            <li class="flex items-start">
-              <span class="text-primary-600 mr-2">•</span>
-              <span
-                ><strong>Right Action</strong> - Behaving peacefully and compassionately</span
-              >
-            </li>
-            <li class="flex items-start">
-              <span class="text-primary-600 mr-2">•</span>
-              <span
-                ><strong>Right Livelihood</strong> - Earning a living without harming
-                others</span
-              >
-            </li>
-          </ul>
-          <p class="text-neutral-700 text-sm">
-            These practices regulate external behavior and help create
-            harmonious relationships with others and the world around us.
-          </p>
-        </div>
-
-        <div
-          class="bg-white p-6 rounded-lg shadow-md border-t-4 border-neutral-500"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <h3 class="text-xl font-serif mb-4">Mental Discipline (Samādhi)</h3>
-          <ul class="space-y-3 mb-4">
-            <li class="flex items-start">
-              <span class="text-primary-600 mr-2">•</span>
-              <span
-                ><strong>Right Effort</strong> - Cultivating positive states of mind</span
-              >
-            </li>
-            <li class="flex items-start">
-              <span class="text-primary-600 mr-2">•</span>
-              <span
-                ><strong>Right Mindfulness</strong> - Maintaining awareness of thoughts,
-                actions and feelings</span
-              >
-            </li>
-            <li class="flex items-start">
-              <span class="text-primary-600 mr-2">•</span>
-              <span
-                ><strong>Right Concentration</strong> - Developing one-pointed concentration
-                and meditation</span
-              >
-            </li>
-          </ul>
-          <p class="text-neutral-700 text-sm">
-            These disciplines develop control over the mind, enabling clarity,
-            focus, and the ability to see things as they truly are.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Related Sections Navigation -->
-  <section class="py-12 bg-primary-50">
+  <section class="py-12 bg-neutral-100">
     <div class="container mx-auto px-4">
       <h2 class="text-2xl font-serif text-center mb-8">
         Continue Your Exploration
@@ -413,7 +299,6 @@ const eightfoldPath = [
     const modal = document.getElementById("path-modal");
     const modalTitle = document.getElementById("modal-title");
     const modalDescription = document.getElementById("modal-description");
-    const modalQuote = document.getElementById("modal-quote");
     const modalApplication = document.getElementById("modal-application");
     const modalEthnic = document.getElementById("modal-ethnic");
     const closeModalBtn = document.getElementById("close-modal");
@@ -424,78 +309,62 @@ const eightfoldPath = [
       "right-understanding": {
         title: "Right Understanding",
         ethnic: "Samma Ditthi",
-        description:
-          "Understanding the Four Noble Truths and seeing reality as it is. Right View is the beginning and end of the path; it simply means to see and understand things as they really are and to realize the Four Noble Truth.",
-        quote: "To see things as they really are is the highest wisdom.",
+        description: `There is a particular perspective on life taught by Buddhism that can lead to the end of suffering. Outside perspectives keep us in the cycle of suffering by preventing us from seeing things as they truly are. One must monitor their actions, speech, and intentions to establish Right Understanding.`,
         application:
-          "Developing an accurate understanding of cause and effect, the nature of suffering, and the potential for liberation. This might involve studying Buddhist teachings, reflecting on your experiences, and cultivating awareness of how your perceptions shape your reality.",
+          "<i>Puja</i> (offering ceremonies) - a devotional practice aimed at expressing respect, gratitude, and devotion, focusing on the qualities of the Buddha in order for one to cultivate the qualities within themselves to establish Right Understanding.",
       },
       "right-intention": {
         title: "Right Intention",
         ethnic: "Samma Sankappa",
-        description:
-          "Cultivating thoughts of goodwill, compassion, and non-harm. Right Intention involves the commitment to ethical and mental self-improvement, including renunciation, good will, and harmlessness.",
-        quote:
-          "The thought manifests as the word. The word manifests as the deed. The deed develops into habit. The habit hardens into character.",
+        description: `Maintaining a commitment to ethical conduct and cultivating wholesome thoughts can lead to both compassionate and wise actions. There are three categories:\n\n    - Intent of Renunciation\n\n    - Intent of Goodwill\n\n    - Intent of Harmlessness`,
         application:
-          "Setting wholesome intentions for your actions and cultivating thoughts that lead to harmony rather than conflict. This might involve examining your motivations, letting go of harmful desires, and fostering compassion toward all beings.",
+          "<i>Pranidhāna</i> - an intention that one sets for a positive purpose, dedicating the merit of their actions for the benefit of others.",
       },
       "right-speech": {
         title: "Right Speech",
         ethnic: "Samma Vaca",
         description:
-          "Speaking truthfully, kindly, and beneficially. Right Speech is abstaining from lying, divisive speech, abusive speech, and idle chatter.",
-        quote:
-          "If you propose to speak, always ask yourself: is it true, is it necessary, is it kind?",
+          "To reflect the broader Buddhist commitment to non-harm and mindfulness, engaging in Right Speech involves promoting harmony, truth, and kindness by being mindful of the impact of one’s words. One must abstain from lying, divisive speech, harsh speech, and frivolous speech.",
         application:
-          "Avoiding lying, divisive speech, harsh words, and idle chatter; using communication to build connection. This might involve practicing honesty while being mindful of how your words affect others, speaking constructively, and knowing when silence is more valuable than speech.",
+          "<i>Satya-vākya</i> (truthful utterance) - a type of confession that reveals honesty during rituals or significant moments. In uttering it, one carries a power for good, setting the tone for engaging in Right Speech.",
       },
       "right-action": {
         title: "Right Action",
         ethnic: "Samma Kammanto",
         description:
-          "Acting ethically and refraining from harmful behaviors. Right Action involves abstaining from killing, stealing, and sexual misconduct, directing our behavior toward ethical and peaceful living.",
-        quote:
-          "One should do what one teaches others to do; if one would train others, one should be well controlled oneself.",
+          "Engaging in deeds that are ethical, beneficial, and promote harmony, ultimately avoiding harm to oneself and others. One must abstain from taking life, stealing, and sexual misconduct, etc. In holding these principles, Right Action encourages Buddhists to act with compassion and take responsibility for their actions.",
         application:
-          "Abstaining from killing, stealing, and sexual misconduct; acting with respect for all beings. This might involve being mindful of how your actions affect others, treating others as you would wish to be treated, and ensuring your behavior aligns with your values.",
+          "Pilgrimages - following stricter codes of conduct to establish moral discipline in a more visceral way.",
       },
       "right-livelihood": {
         title: "Right Livelihood",
         ethnic: "Samma Ajiva",
         description:
-          "Earning a living in ways that do not harm others. Right Livelihood involves making one's living in a way that does not harm other beings, avoiding trades in weapons, living beings, meat, intoxicants, or poisons.",
-        quote: "Make your work to be in keeping with your purpose.",
-        application:
-          "Choosing work that contributes positively to society and avoids causing suffering to other beings. This might involve reflecting on whether your work harms others directly or indirectly, and making changes if necessary to align your livelihood with ethical principles.",
+          "Earning a living in a way that is ethical, harmless, and aligned with the principles of the Buddha’s teachings, thus encouraging individuals to engage in work that avoids causing the suffering of others while supporting personal spiritual development.",
+        application: "",
       },
       "right-effort": {
         title: "Right Effort",
         ethnic: "Samma Vayama",
         description:
-          "Cultivating positive mental states and abandoning negative ones. Right Effort involves preventing unwholesome states of mind from arising, abandoning existing unwholesome states, cultivating wholesome states, and maintaining existing wholesome states.",
-        quote: "Energy and persistence conquer all things.",
+          "Avoiding negative mindsets and having the ability to foster positive qualities that let them go and lead to spiritual progress if they arise. Consistently cultivating and sustaining wholesome mental states.",
         application:
-          "Making conscious effort to develop wholesome qualities and reduce unwholesome tendencies. This might involve practices like meditation, self-reflection, and deliberately cultivating qualities like kindness, generosity, and patience while working to reduce greed, aversion, and delusion.",
+          "<i>Puñña</i> (merit) - generating positive spiritual energy through devotional rituals that purify the mind by avoiding negative mindsets like distraction, greed, or anger.",
       },
       "right-mindfulness": {
         title: "Right Mindfulness",
         ethnic: "Samma Sati",
         description:
-          "Maintaining awareness of body, feelings, mind, and phenomena. Right Mindfulness is the practice of maintaining awareness of thoughts, feelings, body sensations, and surroundings in the present moment with an attitude of openness and acceptance.",
-        quote:
-          "The present moment is filled with joy and happiness. If you are attentive, you will see it.",
-        application:
-          "Practicing continuous awareness of thoughts, emotions, and sensations with a balanced, non-judgmental attitude. This might involve formal meditation practices as well as bringing mindfulness into everyday activities, cultivating moment-to-moment awareness of your experience.",
+          "Developing an attentive awareness of one’s thoughts, feelings, actions, and the surrounding world is essential for the development of wisdom and the elimination of ignorance.",
+        application: "",
       },
       "right-concentration": {
         title: "Right Concentration",
         ethnic: "Samma Samadhi",
         description:
-          "Developing focused, steady awareness through meditation. Right Concentration involves developing one-pointedness of mind through meditation practices, leading to states of absorption that provide a solid basis for wisdom to arise.",
-        quote: "The mind is everything. What you think you become.",
+          "Developing a focused mind is essential for attaining deep states of meditation and ultimately achieving enlightenment.",
         application:
-          "Regular meditation practice to develop mental stability, clarity, and tranquility. This might involve setting aside time for formal sitting meditation, working with a teacher to learn concentration techniques, and gradually developing the ability to sustain attention on a chosen object.",
+          "The Four Jhānas - attaining deep states of meditative absorption characterized by deep joy, inner peace, purity of mind, and overcoming sensory distractions.",
       },
     };
 
@@ -505,9 +374,21 @@ const eightfoldPath = [
       if (path) {
         modalTitle.textContent = path.ethnic;
         modalEthnic.textContent = path.title;
-        modalDescription.textContent = path.description;
-        modalQuote.textContent = path.quote;
-        modalApplication.textContent = path.application;
+        modalDescription.innerHTML = path.description
+          .split("\n\n")
+          .map((p) => `<p class="mb-4">${p}</p>`)
+          .join("");
+
+        const applicationSection = document.querySelector(
+          "#path-modal .bg-primary-50"
+        );
+        if (path.application) {
+          modalApplication.innerHTML = path.application;
+          applicationSection.classList.remove("hidden");
+        } else {
+          applicationSection.classList.add("hidden");
+        }
+
         modal.classList.remove("hidden");
         document.body.style.overflow = "hidden"; // Prevent scrolling when modal is open
       }
